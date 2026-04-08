@@ -12,21 +12,21 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --green: #0e6655;
-      --green-light: #e8f5f1;
-      --green-soft: #f0f9f6;
-      --gold: #c5a64c;
-      --gold-light: #faf6eb;
-      --text: #3a4a42;
-      --text-light: #6b7c74;
+      --concrete: #3a3a3a;
+      --concrete-light: #f0edea;
+      --concrete-soft: #f7f5f3;
+      --amber: #c49a6c;
+      --amber-light: #f9f3ed;
+      --text: #3a3a3a;
+      --text-light: #7a7570;
       --bg: #ffffff;
-      --bg-warm: #f8f7f4;
-      --bg-section: #f5f7f6;
-      --border: #e8ebe9;
+      --bg-warm: #f5f3f0;
+      --bg-section: #f0edea;
+      --border: #e4e0dc;
       --radius: 12px;
       --radius-lg: 20px;
-      --shadow: 0 2px 20px rgba(14, 102, 85, 0.06);
-      --shadow-hover: 0 8px 30px rgba(14, 102, 85, 0.12);
+      --shadow: 0 2px 20px rgba(58, 58, 58, 0.06);
+      --shadow-hover: 0 8px 30px rgba(58, 58, 58, 0.12);
       --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -45,7 +45,7 @@
       font-family: 'DM Serif Display', serif;
       font-weight: 400;
       line-height: 1.2;
-      color: var(--green);
+      color: var(--concrete);
     }
 
     img { max-width: 100%; display: block; }
@@ -91,7 +91,7 @@
     .logo-text {
       font-family: 'DM Serif Display', serif;
       font-size: 1.3rem;
-      color: var(--green);
+      color: var(--concrete);
       letter-spacing: 0.5px;
     }
 
@@ -115,7 +115,7 @@
       letter-spacing: 0.3px;
     }
 
-    nav a:hover { background: var(--green-light); color: var(--green); }
+    nav a:hover { background: var(--concrete-light); color: var(--concrete); }
 
     .btn {
       display: inline-flex;
@@ -133,24 +133,24 @@
     }
 
     .btn-primary {
-      background: var(--green);
+      background: var(--concrete);
       color: #fff;
     }
 
     .btn-primary:hover {
-      background: #0a5447;
+      background: #2d2d2d;
       transform: translateY(-2px);
       box-shadow: var(--shadow-hover);
     }
 
     .btn-outline {
       background: transparent;
-      color: var(--green);
-      border: 1.5px solid var(--green);
+      color: var(--concrete);
+      border: 1.5px solid var(--concrete);
     }
 
     .btn-outline:hover {
-      background: var(--green);
+      background: var(--concrete);
       color: #fff;
       transform: translateY(-2px);
     }
@@ -187,7 +187,7 @@
     /* ─── HERO ─── */
     .hero {
       padding: 80px 0 60px;
-      background: linear-gradient(135deg, var(--green-soft) 0%, var(--bg-warm) 50%, var(--gold-light) 100%);
+      background: linear-gradient(135deg, var(--concrete-soft) 0%, var(--bg-warm) 50%, var(--amber-light) 100%);
       position: relative;
       overflow: hidden;
     }
@@ -199,7 +199,7 @@
       right: -200px;
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, rgba(14, 102, 85, 0.04) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(58, 58, 58, 0.04) 0%, transparent 70%);
       border-radius: 50%;
     }
 
@@ -236,7 +236,7 @@
       right: -20px;
       width: 120px;
       height: 120px;
-      background: var(--gold);
+      background: var(--amber);
       opacity: 0.15;
       border-radius: 50%;
       z-index: -1;
@@ -249,7 +249,7 @@
       left: -15px;
       width: 80px;
       height: 80px;
-      background: var(--green);
+      background: var(--concrete);
       opacity: 0.1;
       border-radius: 50%;
       z-index: -1;
@@ -260,7 +260,7 @@
       height: auto;
       object-fit: cover;
       border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
-      box-shadow: 0 20px 60px rgba(14, 102, 85, 0.15);
+      box-shadow: 0 20px 60px rgba(58, 58, 58, 0.15);
       aspect-ratio: 4 / 5;
     }
 
@@ -269,11 +269,11 @@
       align-items: center;
       gap: 8px;
       padding: 8px 18px;
-      background: rgba(14, 102, 85, 0.08);
+      background: rgba(58, 58, 58, 0.08);
       border-radius: 50px;
       font-size: 0.78rem;
       font-weight: 600;
-      color: var(--green);
+      color: var(--concrete);
       letter-spacing: 1.5px;
       text-transform: uppercase;
       margin-bottom: 28px;
@@ -282,7 +282,7 @@
     .hero h1 {
       font-size: clamp(2.4rem, 4vw, 3.4rem);
       margin-bottom: 24px;
-      color: var(--green);
+      color: var(--concrete);
     }
 
     .hero p {
@@ -305,7 +305,7 @@
 
     .hero-stat h3 {
       font-size: 1.8rem;
-      color: var(--green);
+      color: var(--concrete);
       margin-bottom: 4px;
     }
 
@@ -340,7 +340,7 @@
     .feature-icon {
       width: 56px;
       height: 56px;
-      background: var(--green-light);
+      background: var(--concrete-light);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -386,7 +386,7 @@
       font-weight: 700;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--amber);
       margin-bottom: 16px;
     }
 
@@ -402,7 +402,7 @@
 
     .about-image {
       aspect-ratio: 4/5;
-      background: linear-gradient(135deg, var(--green-light), var(--gold-light));
+      background: linear-gradient(135deg, var(--concrete-light), var(--amber-light));
       border-radius: var(--radius-lg);
       overflow: hidden;
       position: relative;
@@ -446,7 +446,7 @@
       width: 44px;
       height: 44px;
       min-width: 44px;
-      background: var(--green-light);
+      background: var(--concrete-light);
       border-radius: 12px;
       display: flex;
       align-items: center;
@@ -487,7 +487,7 @@
     }
 
     .service-card:hover {
-      border-color: var(--green);
+      border-color: var(--concrete);
       box-shadow: var(--shadow-hover);
       transform: translateY(-4px);
     }
@@ -495,7 +495,7 @@
     .service-card-icon {
       width: 52px;
       height: 52px;
-      background: var(--green-light);
+      background: var(--concrete-light);
       border-radius: 14px;
       display: flex;
       align-items: center;
@@ -520,7 +520,7 @@
       font-family: 'DM Sans', sans-serif;
       font-size: 0.88rem;
       font-weight: 600;
-      color: var(--green);
+      color: var(--concrete);
     }
 
     .service-price span {
@@ -546,7 +546,7 @@
     }
 
     .pricing-table thead {
-      background: var(--green);
+      background: var(--concrete);
     }
 
     .pricing-table th {
@@ -580,7 +580,7 @@
     }
 
     .pricing-table tbody tr:hover {
-      background: var(--green-soft);
+      background: var(--concrete-soft);
     }
 
     .pricing-table tbody tr:last-child td {
@@ -612,7 +612,7 @@
     }
 
     .location-card:hover {
-      border-color: var(--green);
+      border-color: var(--concrete);
       box-shadow: var(--shadow);
     }
 
@@ -621,11 +621,11 @@
       align-items: center;
       gap: 6px;
       padding: 6px 14px;
-      background: var(--green-light);
+      background: var(--concrete-light);
       border-radius: 50px;
       font-size: 0.72rem;
       font-weight: 700;
-      color: var(--green);
+      color: var(--concrete);
       letter-spacing: 1.5px;
       text-transform: uppercase;
       margin-bottom: 20px;
@@ -656,7 +656,7 @@
     }
 
     .location-detail a {
-      color: var(--green);
+      color: var(--concrete);
       font-weight: 500;
     }
 
@@ -671,11 +671,11 @@
     .location-tag {
       display: inline-block;
       padding: 4px 12px;
-      background: var(--gold-light);
+      background: var(--amber-light);
       border-radius: 50px;
       font-size: 0.75rem;
       font-weight: 600;
-      color: var(--gold);
+      color: var(--amber);
       margin-right: 8px;
       margin-bottom: 8px;
     }
@@ -703,7 +703,7 @@
     }
 
     .testimonial-stars {
-      color: var(--gold);
+      color: var(--amber);
       font-size: 1rem;
       letter-spacing: 2px;
       margin-bottom: 16px;
@@ -726,14 +726,14 @@
     .testimonial-avatar {
       width: 42px;
       height: 42px;
-      background: var(--green-light);
+      background: var(--concrete-light);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 700;
       font-size: 0.85rem;
-      color: var(--green);
+      color: var(--concrete);
     }
 
     .testimonial-name {
@@ -750,7 +750,7 @@
     /* ─── PROMO BANNER ─── */
     .promo {
       padding: 80px 0;
-      background: linear-gradient(135deg, var(--green) 0%, #0a5447 100%);
+      background: linear-gradient(135deg, var(--concrete) 0%, #2d2d2d 100%);
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -782,12 +782,12 @@
 
     .promo .btn-primary {
       background: #fff;
-      color: var(--green);
+      color: var(--concrete);
     }
 
     .promo .btn-primary:hover {
-      background: var(--gold-light);
-      color: var(--green);
+      background: var(--amber-light);
+      color: var(--concrete);
     }
 
     /* ─── FOOTER ─── */
@@ -833,7 +833,7 @@
       transition: var(--transition);
     }
 
-    .footer-col a:hover { color: var(--green); }
+    .footer-col a:hover { color: var(--concrete); }
 
     .footer-bottom {
       display: flex;
@@ -849,10 +849,10 @@
       text-align: center;
       padding: 20px;
       margin-top: 32px;
-      background: var(--green-light);
+      background: var(--concrete-light);
       border-radius: var(--radius);
       font-size: 0.9rem;
-      color: var(--green);
+      color: var(--concrete);
       font-weight: 500;
     }
 
