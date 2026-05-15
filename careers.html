@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Now Hiring - Hattha & Peace Harmony Thai Massage</title>
+  <meta name="description" content="Join Hattha & Peace Harmony - Melbourne's premium Thai massage group. Now hiring qualified therapists across all locations. Industry-best conditions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=DM+Serif+Display:wght@400&family=Sarabun:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --concrete: #3a3a3a;
+      --concrete-light: #f0edea;
+      --concrete-soft: #f7f5f3;
+      --amber: #c49a6c;
+      --amber-deep: #a8814d;
+      --amber-light: #f9f3ed;
+      --text: #3a3a3a;
+      --text-light: #7a7570;
+      --bg: #ffffff;
+      --bg-warm: #f5f3f0;
+      --bg-section: #f0edea;
+      --border: #e4e0dc;
+      --radius: 12px;
+      --radius-lg: 20px;
+      --shadow: 0 2px 20px rgba(58, 58, 58, 0.06);
+      --shadow-hover: 0 8px 30px rgba(58, 58, 58, 0.12);
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Thai language font swap */
+    [data-lang="th"] body,
+    [data-lang="th"] h1, [data-lang="th"] h2, [data-lang="th"] h3, [data-lang="th"] h4 {
+      font-family: 'Sarabun', sans-serif;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--concrete);
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ─── HEADER ─── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--amber);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.2rem;
+    }
+
+    .logo-text {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.15rem;
+      color: var(--concrete);
+      letter-spacing: 0.3px;
+      line-height: 1.1;
+    }
+
+    .logo-tagline {
+      font-size: 0.72rem;
+      color: var(--text-light);
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .lang-toggle {
+      display: flex;
+      gap: 4px;
+      background: var(--bg-warm);
+      padding: 4px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+    }
+
+    .lang-btn {
+      padding: 6px 14px;
+      border: 0;
+      background: transparent;
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-light);
+      cursor: pointer;
+      border-radius: 999px;
+      transition: var(--transition);
+    }
+
+    .lang-btn.active {
+      background: var(--concrete);
+      color: white;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: linear-gradient(180deg, var(--bg-warm) 0%, var(--bg) 100%);
+      padding: 80px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, var(--amber-light) 0%, transparent 60%);
+      opacity: 0.5;
+      z-index: 0;
+    }
+
+    .hero-content { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--amber-deep);
+      font-weight: 600;
+      margin-bottom: 22px;
+      padding: 8px 18px;
+      background: white;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      margin-bottom: 22px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 em {
+      color: var(--amber-deep);
+      font-style: italic;
+    }
+
+    .hero-lede {
+      font-size: 1.15rem;
+      color: var(--text-light);
+      max-width: 560px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 60px;
+      justify-content: center;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.4rem;
+      color: var(--amber-deep);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--concrete);
+      color: white;
+      padding: 18px 38px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: var(--transition);
+      border: 0;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .btn-primary:hover {
+      background: var(--amber-deep);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    /* ─── SECTIONS ─── */
+    section {
+      padding: 90px 24px;
+    }
+
+    .section-warm { background: var(--bg-warm); }
+    .section-marble { background: var(--bg-section); }
+
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 60px;
+    }
+
+    .section-header .eyebrow { margin-bottom: 16px; }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: 18px;
+      letter-spacing: -0.3px;
+    }
+
+    .section-header p {
+      font-size: 1.05rem;
+      color: var(--text-light);
+    }
+
+    /* ─── WHY US ─── */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .why-card {
+      background: white;
+      padding: 36px 28px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      border: 1px solid var(--border);
+    }
+
+    .why-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .why-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--amber-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--amber-deep);
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      margin-bottom: 22px;
+    }
+
+    .why-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+
+    .why-card p {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.65;
+    }
+
+    /* ─── ROLES ─── */
+    .roles-list {
+      display: grid;
+      gap: 16px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .role-card {
+      background: white;
+      padding: 30px 36px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      transition: var(--transition);
+    }
+
+    .role-card:hover {
+      border-color: var(--amber);
+      box-shadow: var(--shadow);
+    }
+
+    .role-info h3 {
+      font-size: 1.3rem;
+      margin-bottom: 6px;
+    }
+
+    .role-info p {
+      font-size: 0.92rem;
+      color: var(--text-light);
+    }
+
+    .role-pay {
+      text-align: right;
+    }
+
+    .role-pay-amount {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      color: var(--amber-deep);
+      line-height: 1;
+    }
+
+    .role-pay-label {
+      font-size: 0.72rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+
+    /* ─── LOCATIONS ─── */
+    .locations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .location-pill {
+      background: white;
+      padding: 22px 24px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .location-pill:hover {
+      border-color: var(--amber);
+      background: var(--amber-light);
+    }
+
+    .location-pill h4 {
+      font-size: 1.15rem;
+      margin-bottom: 4px;
+      color: var(--concrete);
+    }
+
+    .location-pill p {
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+
+    /* ─── APPLICATION FORM ─── */
+    .apply-section {
+      background: var(--concrete);
+      color: white;
+    }
+
+    .apply-section .section-header h2 { color: white; }
+    .apply-section .section-header p { color: rgba(255,255,255,0.7); }
+    .apply-section .eyebrow {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.2);
+      color: var(--amber);
+    }
+
+    .apply-form {
+      max-width: 620px;
+      margin: 0 auto;
+      background: white;
+      color: var(--concrete);
+      padding: 48px 44px;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .form-group { margin-bottom: 18px; }
+
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--concrete);
+      background: var(--bg-warm);
+      transition: var(--transition);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--amber);
+      background: white;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 110px;
+      font-family: inherit;
+    }
+
+    .form-submit {
+      width: 100%;
+      background: var(--concrete);
+      color: white;
+      padding: 18px;
+      border: 0;
+      border-radius: var(--radius);
+      font-family: inherit;
+      font-size: 0.92rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 8px;
+    }
+
+    .form-submit:hover {
+      background: var(--amber-deep);
+    }
+
+    .form-foot {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--concrete);
+      color: rgba(255,255,255,0.75);
+      padding: 50px 24px 30px;
+      text-align: center;
+    }
+
+    footer .wm {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      color: white;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    footer p {
+      font-size: 0.85rem;
+      max-width: 480px;
+      margin: 0 auto 16px;
+      line-height: 1.6;
+    }
+
+    footer .small {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.45);
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Language toggle */
+    [data-lang="en"] .lang-th { display: none; }
+    [data-lang="th"] .lang-en { display: none; }
+
+    @media (max-width: 720px) {
+      .form-grid { grid-template-columns: 1fr; }
+      .apply-form { padding: 32px 26px; }
+      .hero { padding: 60px 24px; }
+      .role-card { flex-direction: column; align-items: flex-start; }
+      .role-pay { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="https://hattha-deploy.vercel.app" class="logo">
+        <div class="logo-mark">H</div>
+        <div>
+          <div class="logo-text">Hattha &amp; Peace Harmony</div>
+          <div class="logo-tagline lang-en">Thai Massage Melbourne</div>
+          <div class="logo-tagline lang-th">นวดแผนไทย เมลเบิร์น</div>
+        </div>
+      </a>
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('en')" data-lang-btn="en">EN</button>
+        <button class="lang-btn" onclick="setLang('th')" data-lang-btn="th">ภาษาไทย</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="eyebrow lang-en">Now Hiring</div>
+      <div class="eyebrow lang-th">รับสมัครงาน</div>
+
+      <h1 class="lang-en">Work with one of <em>Melbourne's best</em> Thai massage brands.</h1>
+      <h1 class="lang-th">ร่วมงานกับ <em>แบรนด์นวดไทยชั้นนำ</em> ของเมลเบิร์น</h1>
+
+      <p class="hero-lede lang-en">We're growing across all locations and looking for qualified Thai therapists who want stable hours, industry-best conditions, and a workplace that genuinely values you. Welcome to Hattha &amp; Peace Harmony.</p>
+      <p class="hero-lede lang-th">เรากำลังขยายงานทุกสาขา และกำลังมองหาหมอนวดไทยที่มีประสบการณ์ ผู้ต้องการชั่วโมงทำงานที่มั่นคง สวัสดิการที่ดีที่สุดในวงการ และสถานที่ทำงานที่เห็นคุณค่าของคุณอย่างแท้จริง ยินดีต้อนรับสู่ Hattha &amp; Peace Harmony</p>
+
+      <a href="#apply" class="btn-primary lang-en">Apply Now &rarr;</a>
+      <a href="#apply" class="btn-primary lang-th">สมัครเลย &rarr;</a>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">8+</div>
+          <div class="stat-label lang-en">Locations</div>
+          <div class="stat-label lang-th">สาขา</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">7</div>
+          <div class="stat-label lang-en">Days a Week</div>
+          <div class="stat-label lang-th">วันต่อสัปดาห์</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">15+</div>
+          <div class="stat-label lang-en">Years Established</div>
+          <div class="stat-label lang-th">ปีที่ก่อตั้ง</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY WORK WITH US -->
+  <section class="section-warm">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow lang-en">Why Hattha &amp; Peace Harmony</div>
+        <div class="eyebrow lang-th">ทำไมต้องร่วมงานกับเรา</div>
+        <h2 class="lang-en">Industry-best <em>conditions</em>.</h2>
+        <h2 class="lang-th">สวัสดิการที่ดีที่สุด ในวงการ</h2>
+        <p class="lang-en">We treat our therapists the way we want our clients to feel - valued, supported and respected.</p>
+        <p class="lang-th">เราดูแลทีมงานในแบบเดียวกับที่เราต้องการให้ลูกค้ารู้สึก - มีคุณค่า ได้รับการสนับสนุน และเคารพ</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">$</div>
+          <h3 class="lang-en">Above-industry pay</h3>
+          <h3 class="lang-th">ค่าตอบแทนสูงกว่ามาตรฐาน</h3>
+          <p class="lang-en">Competitive rates plus full commission on upgrades and tips. Paid weekly, every week.</p>
+          <p class="lang-th">อัตราค่าจ้างที่แข่งขันได้ พร้อมค่าคอมมิชชั่นเต็มจำนวนจากการอัพเกรดและทิป จ่ายทุกสัปดาห์</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">⌚</div>
+          <h3 class="lang-en">Flexible shifts</h3>
+          <h3 class="lang-th">เวลาทำงานที่ยืดหยุ่น</h3>
+          <p class="lang-en">Choose your hours, days, and preferred location. Full-time, part-time, or casual - we work around your life.</p>
+          <p class="lang-th">เลือกชั่วโมง วัน และสาขาที่คุณต้องการ ทั้งเต็มเวลา พาร์ทไทม์ หรือชั่วคราว - เราปรับให้เข้ากับชีวิตของคุณ</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">★</div>
+          <h3 class="lang-en">Established clientele</h3>
+          <h3 class="lang-th">ฐานลูกค้าที่มั่นคง</h3>
+          <p class="lang-en">8,000+ regular clients across our locations. No marketing yourself - we keep your calendar full.</p>
+          <p class="lang-th">ลูกค้าประจำกว่า 8,000 คนทุกสาขา ไม่ต้องโปรโมทตัวเอง - เราจะทำให้ตารางงานของคุณเต็มอยู่เสมอ</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">⊕</div>
+          <h3 class="lang-en">Training &amp; development</h3>
+          <h3 class="lang-th">การฝึกอบรมและพัฒนา</h3>
+          <p class="lang-en">Free in-house training in new modalities. Upskill in Vichy shower, hot stone, and 4-hand techniques.</p>
+          <p class="lang-th">การฝึกอบรมฟรีในเทคนิคใหม่ๆ พัฒนาทักษะ Vichy shower หินร้อน และเทคนิคนวด 4 มือ</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">⌂</div>
+          <h3 class="lang-en">Choose your location</h3>
+          <h3 class="lang-th">เลือกสาขาที่ใช่</h3>
+          <p class="lang-en">8 shops across Melbourne and Mornington Peninsula. Pick the one closest to home.</p>
+          <p class="lang-th">8 สาขาทั่วเมลเบิร์นและคาบสมุทรมอร์นิงตัน เลือกสาขาที่ใกล้บ้านคุณ</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">♥</div>
+          <h3 class="lang-en">Genuine community</h3>
+          <h3 class="lang-th">ชุมชนที่อบอุ่น</h3>
+          <p class="lang-en">A team of Thai therapists who support each other. Monthly team dinners, birthdays celebrated, real friendships.</p>
+          <p class="lang-th">ทีมหมอนวดไทยที่สนับสนุนกันและกัน อาหารค่ำทีมประจำเดือน ฉลองวันเกิด มิตรภาพที่แท้จริง</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROLES AVAILABLE -->
+  <section class="section-marble">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow lang-en">Open Positions</div>
+        <div class="eyebrow lang-th">ตำแหน่งที่เปิดรับ</div>
+        <h2 class="lang-en">Multiple roles. <em>All locations</em>.</h2>
+        <h2 class="lang-th">หลายตำแหน่ง ทุกสาขา</h2>
+        <p class="lang-en">Pay rates shown are starting rates - increases based on experience, qualifications and performance.</p>
+        <p class="lang-th">อัตราค่าจ้างที่แสดงเป็นอัตราเริ่มต้น - มีการปรับเพิ่มตามประสบการณ์ คุณสมบัติ และผลงาน</p>
+      </div>
+
+      <div class="roles-list">
+        <div class="role-card">
+          <div class="role-info">
+            <h3 class="lang-en">Thai Massage Therapist</h3>
+            <h3 class="lang-th">หมอนวดแผนไทย</h3>
+            <p class="lang-en">Traditional Thai, relaxation, deep tissue, hot stone. 2+ years experience preferred.</p>
+            <p class="lang-th">นวดแผนไทย นวดผ่อนคลาย นวดน้ำมัน นวดหินร้อน ยินดีรับผู้มีประสบการณ์ 2 ปีขึ้นไป</p>
+          </div>
+          <div class="role-pay">
+            <div class="role-pay-amount">$35-45/hr</div>
+            <div class="role-pay-label lang-en">+ Tips &amp; Bonuses</div>
+            <div class="role-pay-label lang-th">+ ทิปและโบนัส</div>
+          </div>
+        </div>
+
+        <div class="role-card">
+          <div class="role-info">
+            <h3 class="lang-en">Senior Therapist</h3>
+            <h3 class="lang-th">หมอนวดอาวุโส</h3>
+            <p class="lang-en">5+ years experience, Vichy shower or 4-hand certified. Mentor junior staff.</p>
+            <p class="lang-th">ประสบการณ์ 5 ปีขึ้นไป มีใบรับรอง Vichy shower หรือนวด 4 มือ พร้อมเป็นพี่เลี้ยงให้ทีม</p>
+          </div>
+          <div class="role-pay">
+            <div class="role-pay-amount">$45-55/hr</div>
+            <div class="role-pay-label lang-en">+ Tips &amp; Bonuses</div>
+            <div class="role-pay-label lang-th">+ ทิปและโบนัส</div>
+          </div>
+        </div>
+
+        <div class="role-card">
+          <div class="role-info">
+            <h3 class="lang-en">Trainee Therapist</h3>
+            <h3 class="lang-th">หมอนวดฝึกหัด</h3>
+            <p class="lang-en">Recently qualified or completing certification. Full mentorship and paid in-house training.</p>
+            <p class="lang-th">เพิ่งจบหรือกำลังฝึกอบรม มีพี่เลี้ยงเต็มที่และฝึกอบรมในสถานที่แบบมีค่าตอบแทน</p>
+          </div>
+          <div class="role-pay">
+            <div class="role-pay-amount">$28-32/hr</div>
+            <div class="role-pay-label lang-en">+ Training Bonus</div>
+            <div class="role-pay-label lang-th">+ โบนัสฝึกอบรม</div>
+          </div>
+        </div>
+
+        <div class="role-card">
+          <div class="role-info">
+            <h3 class="lang-en">Reception &amp; Front of House</h3>
+            <h3 class="lang-th">พนักงานต้อนรับ</h3>
+            <p class="lang-en">Bilingual Thai/English preferred. Customer service, bookings, in-store sales.</p>
+            <p class="lang-th">รับสมัครผู้พูดได้ทั้งไทยและอังกฤษ บริการลูกค้า รับจอง ขายในร้าน</p>
+          </div>
+          <div class="role-pay">
+            <div class="role-pay-amount">$28-34/hr</div>
+            <div class="role-pay-label lang-en">+ Sales Bonus</div>
+            <div class="role-pay-label lang-th">+ โบนัสยอดขาย</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATIONS -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow lang-en">Choose Your Shop</div>
+        <div class="eyebrow lang-th">เลือกสาขาของคุณ</div>
+        <h2 class="lang-en">8 locations across Melbourne &amp; Mornington Peninsula.</h2>
+        <h2 class="lang-th">8 สาขาทั่วเมลเบิร์น และคาบสมุทรมอร์นิงตัน</h2>
+      </div>
+
+      <div class="locations-grid">
+        <div class="location-pill"><h4>Sandringham</h4><p>VIC 3191</p></div>
+        <div class="location-pill"><h4>Mornington</h4><p>VIC 3931</p></div>
+        <div class="location-pill"><h4>Frankston</h4><p>VIC 3199</p></div>
+        <div class="location-pill"><h4>Hastings</h4><p>VIC 3915</p></div>
+        <div class="location-pill"><h4>Peace Harmony - Hampton</h4><p>VIC</p></div>
+        <div class="location-pill"><h4>Peace Harmony - Brighton</h4><p>VIC</p></div>
+        <div class="location-pill"><h4>Peace Harmony - Beaumaris</h4><p>VIC</p></div>
+        <div class="location-pill"><h4>Peace Harmony - Mentone</h4><p>VIC</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLY -->
+  <section id="apply" class="apply-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow lang-en">Apply Today</div>
+        <div class="eyebrow lang-th">สมัครงานวันนี้</div>
+        <h2 class="lang-en">Ready to <em>join us</em>?</h2>
+        <h2 class="lang-th">พร้อมร่วมงานกับเราหรือยัง?</h2>
+        <p class="lang-en">Fill in the form below and we'll be in touch within 48 hours. All conversations confidential.</p>
+        <p class="lang-th">กรอกแบบฟอร์มด้านล่าง เราจะติดต่อกลับภายใน 48 ชั่วโมง เก็บข้อมูลเป็นความลับ</p>
+      </div>
+
+      <form class="apply-form" id="applyForm" onsubmit="return submitApplication(event)">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="lang-en">First Name</label>
+            <label class="lang-th">ชื่อ</label>
+            <input type="text" name="firstName" required />
+          </div>
+          <div class="form-group">
+            <label class="lang-en">Last Name</label>
+            <label class="lang-th">นามสกุล</label>
+            <input type="text" name="lastName" required />
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="lang-en">Phone</label>
+            <label class="lang-th">เบอร์โทรศัพท์</label>
+            <input type="tel" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label class="lang-en">Email</label>
+            <label class="lang-th">อีเมล</label>
+            <input type="email" name="email" required />
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="lang-en">Role Interested In</label>
+            <label class="lang-th">ตำแหน่งที่สนใจ</label>
+            <select name="role" required>
+              <option value="">— Select —</option>
+              <option value="thai-therapist">Thai Massage Therapist / หมอนวดแผนไทย</option>
+              <option value="senior-therapist">Senior Therapist / หมอนวดอาวุโส</option>
+              <option value="trainee">Trainee Therapist / หมอนวดฝึกหัด</option>
+              <option value="reception">Reception &amp; Front of House / พนักงานต้อนรับ</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="lang-en">Preferred Location</label>
+            <label class="lang-th">สาขาที่ต้องการ</label>
+            <select name="location" required>
+              <option value="">— Select —</option>
+              <option>Any / ที่ไหนก็ได้</option>
+              <option>Sandringham</option>
+              <option>Mornington</option>
+              <option>Frankston</option>
+              <option>Hastings</option>
+              <option>Peace Harmony - Hampton</option>
+              <option>Peace Harmony - Brighton</option>
+              <option>Peace Harmony - Beaumaris</option>
+              <option>Peace Harmony - Mentone</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="lang-en">Years of Experience</label>
+          <label class="lang-th">ประสบการณ์ (ปี)</label>
+          <select name="experience" required>
+            <option value="">— Select —</option>
+            <option>None / Trainee</option>
+            <option>Less than 1 year</option>
+            <option>1-2 years</option>
+            <option>3-5 years</option>
+            <option>5-10 years</option>
+            <option>10+ years</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="lang-en">Tell us about yourself</label>
+          <label class="lang-th">เล่าเกี่ยวกับตัวคุณให้เราฟัง</label>
+          <textarea name="message" placeholder="Your training, qualifications, what you're looking for, when you can start..." required></textarea>
+        </div>
+
+        <button type="submit" class="form-submit lang-en">Submit Application &rarr;</button>
+        <button type="submit" class="form-submit lang-th">ส่งใบสมัคร &rarr;</button>
+
+        <p class="form-foot lang-en">Or call Channy direct on <strong>0406 111 414</strong></p>
+        <p class="form-foot lang-th">หรือโทรหา Channy โดยตรงที่ <strong>0406 111 414</strong></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="wm">Hattha &amp; Peace Harmony</div>
+      <p class="lang-en">Authentic Thai massage across Melbourne and the Mornington Peninsula. 8 locations. 7 days a week. Genuine community.</p>
+      <p class="lang-th">นวดแผนไทยแท้ ทั่วเมลเบิร์น และคาบสมุทรมอร์นิงตัน 8 สาขา เปิด 7 วันต่อสัปดาห์ ชุมชนที่อบอุ่น</p>
+
+      <div class="small">
+        <p class="lang-en">© 2026 Hattha Thai Massage Pty Ltd. All applications confidential.</p>
+        <p class="lang-th">© 2026 Hattha Thai Massage Pty Ltd. ใบสมัครทั้งหมดเก็บเป็นความลับ</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.setAttribute('data-lang', lang);
+      document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.langBtn === lang);
+      });
+      localStorage.setItem('hattha-lang', lang);
+    }
+
+    // Restore language preference
+    const savedLang = localStorage.getItem('hattha-lang');
+    if (savedLang) setLang(savedLang);
+    else if (navigator.language && navigator.language.startsWith('th')) setLang('th');
+
+    // Application form handler - opens prefilled email until Formspree/backend is wired up
+    function submitApplication(e) {
+      e.preventDefault();
+      const f = e.target;
+      const fields = {
+        Name: `${f.firstName.value} ${f.lastName.value}`.trim(),
+        Phone: f.phone.value,
+        Email: f.email.value,
+        Role: f.role.options[f.role.selectedIndex].text,
+        Location: f.location.value,
+        Experience: f.experience.value,
+        Message: f.message.value,
+      };
+      const body = Object.entries(fields)
+        .map(([k, v]) => `${k}: ${v}`)
+        .join('\n');
+      const subject = `Job Application - ${fields.Name} - ${fields.Role}`;
+      const mailto = `mailto:hatthathaimassage@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+      return false;
+    }
+  </script>
+
+</body>
+</html>
