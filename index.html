@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Club Thai Massage - Premium Thai Massage &amp; Membership Melbourne</title>
-  <meta name="description" content="Club Thai Massage - Premium Thai massage and exclusive membership across 8 Melbourne locations. Authentic therapists, member-only benefits, priority booking." />
-  <meta name="description" content="Authentic Thai massage by genuine Thai therapists across 4 Melbourne locations. Relaxation, deep tissue, hot stone, aromatherapy and more.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=DM+Serif+Display:wght@400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Club Thai Massage - Premium Thai Massage &amp; Members Club Melbourne</title>
+  <meta name="description" content="Club Thai Massage - Premium Thai massage across 8 Melbourne locations. Join the Club from $15/month: priority booking, member discounts, and a monthly 4-hand massage prize draw." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --concrete: #3a3a3a;
-      --concrete-light: #f0edea;
-      --concrete-soft: #f7f5f3;
-      --amber: #c49a6c;
-      --amber-light: #f9f3ed;
-      --text: #3a3a3a;
-      --text-light: #7a7570;
-      --bg: #ffffff;
-      --bg-warm: #f5f3f0;
-      --bg-section: #f0edea;
-      --border: #e4e0dc;
-      --radius: 12px;
-      --radius-lg: 20px;
-      --shadow: 0 2px 20px rgba(58, 58, 58, 0.06);
-      --shadow-hover: 0 8px 30px rgba(58, 58, 58, 0.12);
+      /* Dark palette per Tom's fitout colours */
+      --bg-dark: #1a1816;
+      --bg-darker: #110f0d;
+      --bg-section: #221f1c;
+      --bg-card: #2a2622;
+      --bg-card-warm: #322c26;
+
+      /* Wood + marble accents */
+      --wood-warm: #6b5340;
+      --wood-soft: #8a715a;
+
+      /* Gold (primary accent) */
+      --gold: #c49a6c;
+      --gold-light: #d4b48d;
+      --gold-deep: #a8814d;
+
+      /* Text on dark */
+      --text: #f0e8dc;
+      --text-soft: #c4b8a7;
+      --text-dim: #8a7f6f;
+      --text-muted: #5a5247;
+
+      /* Borders + dividers */
+      --border: rgba(196, 154, 108, 0.15);
+      --border-soft: rgba(255, 255, 255, 0.06);
+
+      --radius: 4px;
+      --radius-lg: 12px;
       --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -36,971 +48,686 @@
     body {
       font-family: 'DM Sans', sans-serif;
       color: var(--text);
-      background: var(--bg);
+      background: var(--bg-dark);
       line-height: 1.7;
       font-weight: 400;
       -webkit-font-smoothing: antialiased;
     }
 
     h1, h2, h3, h4 {
-      font-family: 'DM Serif Display', serif;
+      font-family: 'Cormorant Garamond', serif;
       font-weight: 400;
-      line-height: 1.2;
-      color: var(--concrete);
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      color: var(--text);
     }
 
     img { max-width: 100%; display: block; }
     a { text-decoration: none; color: inherit; }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
 
     /* ─── HEADER ─── */
     header {
-      position: sticky;
+      position: absolute;
       top: 0;
+      left: 0;
+      right: 0;
       z-index: 100;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
+      padding: 22px 0;
     }
 
     .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 16px 24px;
-      max-width: 1200px;
+      max-width: 1280px;
       margin: 0 auto;
+      padding: 0 32px;
     }
 
-    .logo {
+    .logo img { height: 50px; width: auto; }
+
+    nav {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 36px;
     }
-
-    .logo img {
-      height: 52px;
-      width: 52px;
-      border-radius: 50%;
-    }
-
-    .logo-text {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.3rem;
-      color: var(--concrete);
-      letter-spacing: 0.5px;
-    }
-
-    .logo-tagline {
-      font-size: 0.7rem;
-      color: var(--text-light);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-top: 2px;
-    }
-
-    nav { display: flex; align-items: center; gap: 8px; }
 
     nav a {
-      padding: 10px 18px;
-      font-size: 0.88rem;
-      font-weight: 500;
-      color: var(--text);
-      border-radius: 8px;
-      transition: var(--transition);
-      letter-spacing: 0.3px;
-    }
-
-    nav a:hover { background: var(--concrete-light); color: var(--concrete); }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 32px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 600;
-      border-radius: 50px;
-      border: none;
-      cursor: pointer;
-      transition: var(--transition);
-      letter-spacing: 0.5px;
-    }
-
-    .btn-primary {
-      background: var(--concrete);
-      color: #fff;
-    }
-
-    .btn-primary:hover {
-      background: #2d2d2d;
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-hover);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--concrete);
-      border: 1.5px solid var(--concrete);
-    }
-
-    .btn-outline:hover {
-      background: var(--concrete);
-      color: #fff;
-      transform: translateY(-2px);
-    }
-
-    .btn-small {
-      padding: 10px 24px;
-      font-size: 0.82rem;
-    }
-
-    .btn-nav {
-      padding: 10px 24px;
       font-size: 0.85rem;
-    }
-
-    /* ─── MOBILE NAV ─── */
-    .mobile-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 8px;
-    }
-
-    .mobile-toggle span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--text);
-      margin: 6px 0;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text);
       transition: var(--transition);
-      border-radius: 2px;
+      font-weight: 500;
     }
+
+    nav a:hover { color: var(--gold); }
+
+    .btn-book {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--gold);
+      padding: 12px 26px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .btn-book:hover { background: var(--gold); color: var(--bg-darker); }
+
+    /* ─── MEMBERSHIP TICKER (top bar) ─── */
+    .ticker {
+      background: var(--gold);
+      color: var(--bg-darker);
+      padding: 10px 16px;
+      text-align: center;
+      font-size: 0.78rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      position: relative;
+      z-index: 200;
+    }
+
+    .ticker a { color: var(--bg-darker); border-bottom: 1px solid currentColor; padding-bottom: 1px; }
 
     /* ─── HERO ─── */
     .hero {
-      padding: 80px 0 60px;
-      background: linear-gradient(135deg, var(--concrete-soft) 0%, var(--bg-warm) 50%, var(--amber-light) 100%);
       position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -200px;
-      right: -200px;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(58, 58, 58, 0.04) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    .hero .container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      min-height: 100vh;
+      background:
+        linear-gradient(180deg, rgba(17,15,13,0.5) 0%, rgba(17,15,13,0.85) 100%),
+        url('assets/treatment-room.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
       align-items: center;
+      padding-top: 100px;
     }
 
     .hero-content {
       position: relative;
       z-index: 1;
+      padding: 80px 0 60px;
     }
 
-    .hero-image {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .hero-image-wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 480px;
-    }
-
-    .hero-image-wrapper::before {
-      content: '';
-      position: absolute;
-      top: -20px;
-      right: -20px;
-      width: 120px;
-      height: 120px;
-      background: var(--amber);
-      opacity: 0.15;
-      border-radius: 50%;
-      z-index: -1;
-    }
-
-    .hero-image-wrapper::after {
-      content: '';
-      position: absolute;
-      bottom: -15px;
-      left: -15px;
-      width: 80px;
-      height: 80px;
-      background: var(--concrete);
-      opacity: 0.1;
-      border-radius: 50%;
-      z-index: -1;
-    }
-
-    .hero-image-wrapper img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
-      box-shadow: 0 20px 60px rgba(58, 58, 58, 0.15);
-      aspect-ratio: 4 / 5;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 18px;
-      background: rgba(58, 58, 58, 0.08);
-      border-radius: 50px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--concrete);
-      letter-spacing: 1.5px;
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 4px;
       text-transform: uppercase;
-      margin-bottom: 28px;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 22px;
     }
 
     .hero h1 {
-      font-size: clamp(2.4rem, 4vw, 3.4rem);
-      margin-bottom: 24px;
-      color: var(--concrete);
+      font-size: clamp(3rem, 6.5vw, 5.5rem);
+      color: var(--text);
+      max-width: 720px;
+      margin-bottom: 26px;
+      letter-spacing: -1.5px;
+      line-height: 1;
     }
 
-    .hero p {
-      font-size: 1.05rem;
-      color: var(--text-light);
-      max-width: 540px;
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 300;
+    }
+
+    .hero-lede {
+      font-size: 1.15rem;
+      color: var(--text-soft);
+      max-width: 480px;
       margin-bottom: 36px;
-      line-height: 1.8;
+      line-height: 1.6;
     }
 
-    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
-
-    .hero-stats {
+    .hero-ctas {
       display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--bg-darker);
+      padding: 18px 36px;
+      font-size: 0.82rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      border: 0;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--text);
+      border: 1px solid rgba(240,232,220,0.4);
+      padding: 18px 36px;
+      font-size: 0.82rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      transition: var(--transition);
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .hero-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 36px;
-      margin-top: 48px;
+      max-width: 920px;
       padding-top: 32px;
       border-top: 1px solid var(--border);
     }
 
-    .hero-stat h3 {
-      font-size: 1.8rem;
-      color: var(--concrete);
-      margin-bottom: 4px;
-    }
-
-    .hero-stat p {
-      font-size: 0.82rem;
-      color: var(--text-light);
-      letter-spacing: 0.5px;
-      margin: 0;
-    }
-
-    /* ─── FEATURES BAR ─── */
-    .features-bar {
-      padding: 48px 0;
-      background: var(--bg);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-      text-align: center;
-    }
-
-    .feature-item {
+    .feature {
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       gap: 12px;
     }
 
     .feature-icon {
-      width: 56px;
-      height: 56px;
-      background: var(--concrete-light);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      color: var(--gold);
+      margin-top: 2px;
     }
 
-    .feature-item h4 {
+    .feature-icon svg { width: 100%; height: 100%; }
+
+    .feature-text h4 {
       font-family: 'DM Sans', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    .feature-item p {
-      font-size: 0.85rem;
-      color: var(--text-light);
-      max-width: 280px;
-    }
-
-    /* ─── SECTIONS ─── */
-    section { padding: 96px 0; }
-
-    .section-header {
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto 56px;
-    }
-
-    .section-header h2 {
-      font-size: clamp(2rem, 3.5vw, 2.8rem);
-      margin-bottom: 16px;
-    }
-
-    .section-header p {
-      font-size: 1.05rem;
-      color: var(--text-light);
-    }
-
-    .section-label {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 700;
+      font-size: 0.7rem;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: var(--amber);
-      margin-bottom: 16px;
+      color: var(--gold);
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 4px;
     }
 
-    /* ─── ABOUT ─── */
-    .about { background: var(--bg-warm); }
+    .feature-text p {
+      font-size: 0.78rem;
+      color: var(--text-soft);
+      line-height: 1.4;
+    }
 
-    .about-grid {
+    /* ─── MEMBERSHIP HERO BANNER (after hero) ─── */
+    .membership-banner {
+      background: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-section) 100%);
+      padding: 80px 32px;
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .membership-banner::before {
+      content: '';
+      position: absolute;
+      width: 900px;
+      height: 900px;
+      background: radial-gradient(circle, rgba(196,154,108,0.12) 0%, transparent 60%);
+      top: -300px;
+      right: -200px;
+    }
+
+    .membership-banner::after {
+      content: '';
+      position: absolute;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(196,154,108,0.08) 0%, transparent 60%);
+      bottom: -250px;
+      left: -150px;
+    }
+
+    .mb-grid {
+      position: relative;
+      z-index: 1;
+      max-width: 1280px;
+      margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .mb-content { padding: 20px 0; }
+
+    .mb-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(196,154,108,0.12);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 8px 20px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .mb-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .mb-content h2 {
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      color: var(--text);
+      margin-bottom: 22px;
+      line-height: 1;
+    }
+
+    .mb-content h2 em {
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 300;
+    }
+
+    .mb-content p {
+      font-size: 1.05rem;
+      color: var(--text-soft);
+      max-width: 480px;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .mb-ctas {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .mb-pricing {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      color: var(--text-soft);
+      font-size: 0.82rem;
+    }
+
+    .mb-pricing strong {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: var(--gold);
+      letter-spacing: -0.5px;
+      font-weight: 500;
+    }
+
+    /* Prize card */
+    .prize-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 44px 38px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .prize-card::before {
+      content: '';
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(196,154,108,0.18) 0%, transparent 60%);
+      top: -100px;
+      right: -100px;
+    }
+
+    .prize-card > * { position: relative; z-index: 1; }
+
+    .prize-label {
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .prize-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      color: var(--text);
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .prize-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .prize-detail {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    .prize-stats {
+      display: flex;
+      gap: 30px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .prize-stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .prize-stat-label {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    /* ─── WELCOME / ABOUT SECTION ─── */
+    .welcome {
+      background: var(--bg-darker);
+      padding: 120px 0;
+    }
+
+    .welcome-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
       gap: 80px;
       align-items: center;
     }
 
-    .about-image {
-      aspect-ratio: 4/5;
-      background: linear-gradient(135deg, var(--concrete-light), var(--amber-light));
-      border-radius: var(--radius-lg);
+    .welcome-text .eyebrow { margin-bottom: 18px; }
+
+    .welcome-text h2 {
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      margin-bottom: 26px;
+      line-height: 1;
+    }
+
+    .welcome-text h2 em {
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 300;
+    }
+
+    .welcome-text p {
+      font-size: 1.05rem;
+      color: var(--text-soft);
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .welcome-checks {
+      margin: 32px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .welcome-checks li {
+      display: flex;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border-soft);
+      color: var(--text);
+      font-size: 0.98rem;
+    }
+
+    .welcome-checks li::before {
+      content: '✓';
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .welcome-images {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 14px;
+      height: 580px;
+    }
+
+    .welcome-img {
+      background-size: cover;
+      background-position: center;
+      border-radius: var(--radius);
       overflow: hidden;
       position: relative;
     }
 
-    .about-image-placeholder {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 4rem;
-      opacity: 0.3;
+    .welcome-img:nth-child(1) {
+      grid-row: 1 / 3;
+      background-image: url('assets/corridor.png');
     }
 
-    .about-content h2 {
-      font-size: 2.4rem;
-      margin-bottom: 24px;
+    .welcome-img:nth-child(2) {
+      background-image: url('assets/treatment-room.png');
     }
 
-    .about-content p {
-      color: var(--text-light);
-      margin-bottom: 20px;
-      font-size: 1.02rem;
+    .welcome-img:nth-child(3) {
+      background-image: url('assets/treatment-room.png');
+      filter: hue-rotate(15deg);
     }
 
-    .about-values {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      margin-top: 32px;
+    /* ─── TREATMENTS ─── */
+    .treatments {
+      background: var(--bg-darker);
+      padding: 120px 0;
+      border-top: 1px solid var(--border-soft);
     }
 
-    .about-value {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-    }
-
-    .about-value-icon {
-      width: 44px;
-      height: 44px;
-      min-width: 44px;
-      background: var(--concrete-light);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-    }
-
-    .about-value h4 {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: var(--text);
-      margin-bottom: 4px;
-    }
-
-    .about-value p {
-      font-size: 0.88rem;
-      margin: 0;
-    }
-
-    /* ─── SERVICES ─── */
-    .services { background: var(--bg); }
-
-    .services-grid {
+    .treatments-header {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr 1.4fr;
+      gap: 80px;
+      align-items: end;
+      margin-bottom: 70px;
+    }
+
+    .treatments-header h2 {
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      margin: 16px 0 0;
+    }
+
+    .treatments-header h2 em { font-style: italic; color: var(--gold); }
+
+    .treatments-header p {
+      font-size: 1.05rem;
+      color: var(--text-soft);
+      line-height: 1.7;
+    }
+
+    .treatment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 24px;
     }
 
-    .service-card {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 36px 28px;
+    .treatment-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
       transition: var(--transition);
-      position: relative;
-      overflow: hidden;
     }
 
-    .service-card:hover {
-      border-color: var(--concrete);
-      box-shadow: var(--shadow-hover);
+    .treatment-card:hover {
+      border-color: var(--gold);
       transform: translateY(-4px);
     }
 
-    .service-card-icon {
-      width: 52px;
-      height: 52px;
-      background: var(--concrete-light);
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      margin-bottom: 20px;
+    .treatment-img {
+      aspect-ratio: 1 / 0.85;
+      background-size: cover;
+      background-position: center;
     }
 
-    .service-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 12px;
+    .treatment-body {
+      padding: 24px 22px 28px;
     }
 
-    .service-card p {
-      font-size: 0.9rem;
-      color: var(--text-light);
-      margin-bottom: 20px;
-      line-height: 1.7;
-    }
-
-    .service-price {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--concrete);
-    }
-
-    .service-price span {
-      font-weight: 400;
-      color: var(--text-light);
-    }
-
-    /* ─── PRICING TABLE ─── */
-    .pricing { background: var(--bg-warm); }
-
-    .pricing-table-wrapper {
-      overflow-x: auto;
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .pricing-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: var(--bg);
-      min-width: 600px;
-    }
-
-    .pricing-table thead {
-      background: var(--concrete);
-    }
-
-    .pricing-table th {
-      padding: 18px 20px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: #fff;
-      text-align: center;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
-    .pricing-table th:first-child {
-      text-align: left;
-      padding-left: 28px;
-    }
-
-    .pricing-table td {
-      padding: 16px 20px;
-      font-size: 0.92rem;
-      text-align: center;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .pricing-table td:first-child {
-      text-align: left;
-      font-weight: 500;
-      padding-left: 28px;
-      color: var(--text);
-    }
-
-    .pricing-table tbody tr:hover {
-      background: var(--concrete-soft);
-    }
-
-    .pricing-table tbody tr:last-child td {
-      border-bottom: none;
-    }
-
-    .pricing-note {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 0.85rem;
-      color: var(--text-light);
-    }
-
-    /* ─── LOCATIONS ─── */
-    .locations { background: var(--bg); }
-
-    .locations-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    .location-card {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 36px;
-      transition: var(--transition);
-    }
-
-    .location-card:hover {
-      border-color: var(--concrete);
-      box-shadow: var(--shadow);
-    }
-
-    .location-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
-      background: var(--concrete-light);
-      border-radius: 50px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: var(--concrete);
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-
-    .location-card h3 {
+    .treatment-body h3 {
       font-size: 1.4rem;
-      margin-bottom: 16px;
+      color: var(--text);
+      margin-bottom: 10px;
     }
 
-    .location-detail {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      margin-bottom: 12px;
-    }
-
-    .location-detail-icon {
-      font-size: 1rem;
-      min-width: 20px;
-      text-align: center;
-      margin-top: 3px;
-    }
-
-    .location-detail p {
-      font-size: 0.9rem;
-      color: var(--text-light);
-    }
-
-    .location-detail a {
-      color: var(--concrete);
-      font-weight: 500;
-    }
-
-    .location-detail a:hover { text-decoration: underline; }
-
-    .location-extras {
-      margin-top: 16px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
-    }
-
-    .location-tag {
-      display: inline-block;
-      padding: 4px 12px;
-      background: var(--amber-light);
-      border-radius: 50px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--amber);
-      margin-right: 8px;
-      margin-bottom: 8px;
-    }
-
-    .location-actions {
-      display: flex;
-      gap: 12px;
-      margin-top: 24px;
-    }
-
-    /* ─── TESTIMONIALS ─── */
-    .testimonials { background: var(--bg-warm); }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .testimonial-card {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 32px;
-    }
-
-    .testimonial-stars {
-      color: var(--amber);
-      font-size: 1rem;
-      letter-spacing: 2px;
-      margin-bottom: 16px;
-    }
-
-    .testimonial-card p {
-      font-size: 0.95rem;
-      color: var(--text-light);
-      line-height: 1.8;
-      margin-bottom: 20px;
-      font-style: italic;
-    }
-
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .testimonial-avatar {
-      width: 42px;
-      height: 42px;
-      background: var(--concrete-light);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
+    .treatment-body p {
       font-size: 0.85rem;
-      color: var(--concrete);
-    }
-
-    .testimonial-name {
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: var(--text);
-    }
-
-    .testimonial-location {
-      font-size: 0.78rem;
-      color: var(--text-light);
-    }
-
-    /* ─── PROMO BANNER ─── */
-    .promo {
-      padding: 80px 0;
-      background: linear-gradient(135deg, var(--concrete) 0%, #2d2d2d 100%);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .promo::before {
-      content: '';
-      position: absolute;
-      top: -100px;
-      left: -100px;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    .promo h2 {
-      font-size: clamp(2rem, 3.5vw, 2.6rem);
-      color: #fff;
-      margin-bottom: 16px;
-    }
-
-    .promo p {
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 1.1rem;
-      max-width: 500px;
-      margin: 0 auto 36px;
-    }
-
-    .promo .btn-primary {
-      background: #fff;
-      color: var(--concrete);
-    }
-
-    .promo .btn-primary:hover {
-      background: var(--amber-light);
-      color: var(--concrete);
-    }
-
-    /* ─── FOOTER ─── */
-    footer {
-      background: var(--bg-section);
-      border-top: 1px solid var(--border);
-      padding: 64px 0 32px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1.5fr;
-      gap: 48px;
-      margin-bottom: 48px;
-    }
-
-    .footer-brand h3 {
-      font-size: 1.3rem;
-      margin-bottom: 12px;
-    }
-
-    .footer-brand p {
-      font-size: 0.88rem;
-      color: var(--text-light);
-      line-height: 1.7;
-    }
-
-    .footer-col h4 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--text);
+      color: var(--text-soft);
+      line-height: 1.55;
       margin-bottom: 20px;
+      min-height: 60px;
     }
 
-    .footer-col a {
+    .treatment-price {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 14px;
+    }
+
+    .treatment-price strong {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      letter-spacing: -0.5px;
+      font-weight: 500;
+      margin-left: 4px;
+    }
+
+    .treatment-book {
       display: block;
-      font-size: 0.88rem;
-      color: var(--text-light);
-      padding: 6px 0;
+      text-align: center;
+      padding: 12px;
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
       transition: var(--transition);
     }
 
-    .footer-col a:hover { color: var(--concrete); }
+    .treatment-book:hover { background: var(--gold); color: var(--bg-darker); border-color: var(--gold); }
 
-    .footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 32px;
-      border-top: 1px solid var(--border);
-      font-size: 0.82rem;
-      color: var(--text-light);
-    }
-
-    .footer-hiring {
-      text-align: center;
-      padding: 20px;
-      margin-top: 32px;
-      background: var(--concrete-light);
-      border-radius: var(--radius);
-      font-size: 0.9rem;
-      color: var(--concrete);
-      font-weight: 500;
-    }
-
-    .footer-hiring strong {
-      display: block;
-      font-size: 1rem;
-      margin-bottom: 4px;
-    }
-
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 1024px) {
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .footer-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 768px) {
-      nav { display: none; }
-      .mobile-toggle { display: block; }
-
-      nav.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--bg);
-        border-bottom: 1px solid var(--border);
-        padding: 16px 24px;
-        box-shadow: var(--shadow);
-      }
-
-      .hero { padding: 60px 0; }
-      .hero .container { grid-template-columns: 1fr; gap: 40px; }
-      .hero-image { order: -1; }
-      .hero-image-wrapper { max-width: 340px; margin: 0 auto; }
-      .hero h1 { font-size: 2.2rem; }
-      .hero-stats { gap: 24px; flex-wrap: wrap; }
-
-      .features-grid { grid-template-columns: 1fr; gap: 32px; }
-      .about-grid { grid-template-columns: 1fr; gap: 40px; }
-      .services-grid { grid-template-columns: 1fr; }
-      .locations-grid { grid-template-columns: 1fr; }
-      .testimonials-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-
-      section { padding: 64px 0; }
-      .section-header { margin-bottom: 40px; }
-      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
-    }
-
-    @media (max-width: 480px) {
-      .hero-buttons { flex-direction: column; }
-      .hero-buttons .btn { width: 100%; }
-      .location-actions { flex-direction: column; }
-      .location-actions .btn { width: 100%; text-align: center; }
-    }
-
-    /* ─── MEMBERSHIP SECTION ─── */
+    /* ─── MEMBERSHIP TIERS ─── */
     .membership {
-      background: var(--concrete);
-      color: white;
+      background: var(--bg-section);
+      padding: 120px 0;
       position: relative;
       overflow: hidden;
     }
 
-    .membership::before {
-      content: '';
-      position: absolute;
-      width: 800px;
-      height: 800px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(196,154,108,0.18) 0%, transparent 60%);
-      top: -200px;
-      right: -200px;
-      z-index: 0;
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 70px;
     }
 
-    .membership::after {
-      content: '';
-      position: absolute;
-      width: 600px;
-      height: 600px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(196,154,108,0.1) 0%, transparent 60%);
-      bottom: -200px;
-      left: -200px;
-      z-index: 0;
+    .section-header h2 {
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      margin: 16px 0;
+      line-height: 1;
     }
 
-    .membership > .container { position: relative; z-index: 1; }
+    .section-header h2 em { font-style: italic; color: var(--gold); }
 
-    .membership .section-label { color: var(--amber); }
-    .membership h2 { color: white; }
-    .membership h2 em { font-style: italic; color: var(--amber); font-family: inherit; }
-    .membership .section-header p { color: rgba(255,255,255,0.7); }
+    .section-header p {
+      font-size: 1.05rem;
+      color: var(--text-soft);
+    }
 
     .tier-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 28px;
+      gap: 24px;
       max-width: 980px;
       margin: 0 auto;
     }
 
     .tier-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: var(--radius-lg);
-      padding: 44px 38px 40px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      padding: 48px 40px;
       position: relative;
       transition: var(--transition);
     }
 
     .tier-card.gold {
-      background: linear-gradient(180deg, rgba(196,154,108,0.12) 0%, rgba(196,154,108,0.04) 100%);
-      border: 1px solid rgba(196,154,108,0.4);
+      background: linear-gradient(180deg, rgba(196,154,108,0.1) 0%, rgba(196,154,108,0.02) 100%);
+      border: 1px solid var(--gold);
     }
 
     .tier-card.gold::before {
       content: 'Best Value';
       position: absolute;
-      top: -12px;
-      right: 28px;
-      background: var(--amber);
-      color: white;
+      top: -14px;
+      right: 30px;
+      background: var(--gold);
+      color: var(--bg-darker);
       font-size: 0.7rem;
-      letter-spacing: 1.5px;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
       font-weight: 700;
-      padding: 6px 14px;
-      border-radius: 999px;
+      padding: 7px 16px;
     }
 
     .tier-name {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.8rem;
-      color: white;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: var(--text);
       margin-bottom: 8px;
-      letter-spacing: -0.3px;
     }
 
-    .tier-card.gold .tier-name { color: var(--amber); }
+    .tier-card.gold .tier-name { color: var(--gold); }
 
     .tier-tagline {
-      font-size: 0.95rem;
-      color: rgba(255,255,255,0.65);
+      font-size: 0.92rem;
+      color: var(--text-dim);
       margin-bottom: 28px;
       line-height: 1.5;
     }
@@ -1008,45 +735,42 @@
     .tier-price {
       display: flex;
       align-items: baseline;
-      gap: 8px;
-      margin-bottom: 6px;
-      color: white;
+      gap: 6px;
     }
 
     .tier-price-num {
-      font-family: 'DM Serif Display', serif;
-      font-size: 3rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.4rem;
       line-height: 1;
-      letter-spacing: -1px;
+      color: var(--text);
+      letter-spacing: -1.5px;
     }
 
-    .tier-card.gold .tier-price-num { color: var(--amber); }
+    .tier-card.gold .tier-price-num { color: var(--gold); }
 
     .tier-price-period {
-      font-size: 0.95rem;
-      color: rgba(255,255,255,0.65);
+      font-size: 0.92rem;
+      color: var(--text-dim);
     }
 
     .tier-price-annual {
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.55);
+      font-size: 0.78rem;
+      color: var(--text-muted);
       letter-spacing: 0.5px;
-      margin-bottom: 30px;
+      margin-bottom: 32px;
     }
-
-    .tier-card.gold .tier-price-annual { color: rgba(196,154,108,0.85); }
 
     .tier-features {
       list-style: none;
       margin: 0 0 32px;
       padding: 28px 0 0;
-      border-top: 1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid var(--border-soft);
     }
 
     .tier-features li {
-      padding: 11px 0;
-      font-size: 0.92rem;
-      color: rgba(255,255,255,0.85);
+      padding: 10px 0;
+      font-size: 0.9rem;
+      color: var(--text-soft);
       display: flex;
       align-items: flex-start;
       gap: 12px;
@@ -1055,31 +779,24 @@
 
     .tier-features li::before {
       content: '✓';
-      color: var(--amber);
+      color: var(--gold);
       font-weight: 700;
       flex-shrink: 0;
       margin-top: 1px;
     }
 
-    .tier-features li.muted {
-      color: rgba(255,255,255,0.4);
-    }
-
-    .tier-features li.muted::before {
-      content: '—';
-      color: rgba(255,255,255,0.3);
-    }
+    .tier-features li.muted { color: var(--text-muted); }
+    .tier-features li.muted::before { content: '—'; color: var(--text-muted); }
 
     .tier-cta {
       display: block;
       width: 100%;
       text-align: center;
-      padding: 16px 24px;
-      border-radius: 999px;
-      font-size: 0.88rem;
-      letter-spacing: 1.5px;
+      padding: 16px;
+      font-size: 0.8rem;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      font-weight: 600;
+      font-weight: 700;
       transition: var(--transition);
       cursor: pointer;
       border: 0;
@@ -1087,108 +804,295 @@
     }
 
     .tier-card .tier-cta {
-      background: rgba(255,255,255,0.1);
-      color: white;
-      border: 1px solid rgba(255,255,255,0.2);
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
     }
 
     .tier-card .tier-cta:hover {
-      background: white;
-      color: var(--concrete);
+      background: var(--text);
+      color: var(--bg-darker);
     }
 
     .tier-card.gold .tier-cta {
-      background: var(--amber);
-      color: var(--concrete);
+      background: var(--gold);
+      color: var(--bg-darker);
     }
 
     .tier-card.gold .tier-cta:hover {
-      background: white;
+      background: var(--gold-light);
     }
 
-    .members-perks {
+    /* ─── LOCATIONS ─── */
+    .locations {
+      background: var(--bg-darker);
+      padding: 120px 0;
+    }
+
+    .locations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .location-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      padding: 30px 28px;
+      transition: var(--transition);
+    }
+
+    .location-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-3px);
+    }
+
+    .location-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    .location-card .addr {
+      font-size: 0.88rem;
+      color: var(--text-soft);
+      line-height: 1.5;
+      margin-bottom: 16px;
+      min-height: 44px;
+    }
+
+    .location-card .hours {
+      font-size: 0.78rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .location-card .actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .location-card .actions a {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      font-size: 0.72rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .location-card .actions a:first-child {
+      background: var(--gold);
+      color: var(--bg-darker);
+    }
+
+    .location-card .actions a:first-child:hover { background: var(--gold-light); }
+
+    .location-card .actions a:last-child {
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .location-card .actions a:last-child:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ─── REVIEWS ─── */
+    .reviews {
+      background: var(--bg-section);
+      padding: 120px 0;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
       max-width: 1100px;
-      margin: 70px auto 0;
+      margin: 0 auto;
+    }
+
+    .review-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      padding: 38px 32px;
+    }
+
+    .review-stars {
+      color: var(--gold);
+      font-size: 0.95rem;
+      letter-spacing: 4px;
+      margin-bottom: 18px;
+    }
+
+    .review-card blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.3rem;
+      color: var(--text);
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+
+    .review-card cite {
+      display: block;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      font-style: normal;
+    }
+
+    /* ─── STATS BAR ─── */
+    .stats {
+      background: var(--bg-card-warm);
+      padding: 36px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
       text-align: center;
     }
 
-    .members-perks h3 {
-      color: white;
-      font-size: 1.5rem;
-      margin-bottom: 30px;
+    .stats-item h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 4px;
     }
 
-    .perks-grid {
+    .stats-item p {
+      font-size: 0.78rem;
+      color: var(--text-soft);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--bg-darker);
+      padding: 70px 0 30px;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .footer-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 18px;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 50px;
     }
 
-    .perk {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: var(--radius);
-      padding: 24px 18px;
+    .footer-brand img { height: 56px; margin-bottom: 20px; }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      line-height: 1.6;
+      max-width: 320px;
     }
 
-    .perk-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: rgba(196,154,108,0.15);
-      color: var(--amber);
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.2rem;
+    .footer-col h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 0.88rem;
+      color: var(--text-soft);
+      padding: 7px 0;
+      transition: var(--transition);
+    }
+
+    .footer-col a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-soft);
+      padding-top: 26px;
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-bottom .socials {
+      display: flex;
+      gap: 14px;
+    }
+
+    .footer-bottom .socials a {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 14px;
+      color: var(--text-soft);
+      transition: var(--transition);
+      font-size: 0.8rem;
     }
 
-    .perk h4 {
-      color: white;
-      font-size: 0.95rem;
-      margin-bottom: 6px;
+    .footer-bottom .socials a:hover {
+      background: var(--gold);
+      color: var(--bg-darker);
+      border-color: var(--gold);
     }
 
-    .perk p {
-      color: rgba(255,255,255,0.6);
-      font-size: 0.82rem;
-      line-height: 1.5;
+    /* ─── MOBILE ─── */
+    @media (max-width: 900px) {
+      .mb-grid, .welcome-grid, .treatments-header { grid-template-columns: 1fr; gap: 40px; }
+      .welcome-images { height: 400px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
     }
 
-    .membership-foot {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.55);
-    }
-
-    @media (max-width: 768px) {
+    @media (max-width: 640px) {
+      nav { display: none; }
+      .hero h1 { font-size: 2.6rem; }
+      .mb-content h2 { font-size: 2.4rem; }
+      .footer-grid { grid-template-columns: 1fr; }
       .tier-grid { grid-template-columns: 1fr; }
+      .prize-stats { flex-direction: column; gap: 16px; }
     }
   </style>
 </head>
 <body>
 
+  <!-- ─── TICKER (Membership CTA) ─── -->
+  <div class="ticker">
+    Memberships Limited · Join from $15/month · <a href="#membership">Enter the Monthly Draw to Win a 4-Hand Massage</a>
+  </div>
+
   <!-- ─── HEADER ─── -->
   <header>
     <div class="header-inner">
       <a href="#" class="logo">
-        <img src="logo-ctm.png" alt="Club Thai Massage" style="height:44px;width:auto;border-radius:0;background:transparent;display:block;">
+        <img src="logo-ctm.png" alt="Club Thai Massage" />
       </a>
-      <button class="mobile-toggle" onclick="document.querySelector('nav').classList.toggle('active')" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
       <nav>
         <a href="#about">About</a>
-        <a href="#services">Services</a>
+        <a href="#treatments">Treatments</a>
         <a href="#membership">Membership</a>
-        <a href="#pricing">Pricing</a>
         <a href="#locations">Locations</a>
         <a href="#reviews">Reviews</a>
         <a href="/careers">Careers</a>
-        <a href="#locations" class="btn btn-primary btn-nav">Book Now</a>
+        <a href="#locations" class="btn-book">Book Now</a>
       </nav>
     </div>
   </header>
@@ -1197,96 +1101,41 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <div class="hero-badge">Authentic Thai Massage · Members Club</div>
-        <h1>Leave Your Stress at Our Doorstep</h1>
-        <p>Experience revitalising, authentic Thai massage by genuine Thai therapists. Eight locations across Melbourne and the Mornington Peninsula. Become a member and unlock priority booking, exclusive discounts, and monthly prize draws.</p>
-        <div class="hero-buttons">
-          <a href="#locations" class="btn btn-primary">Book Your Massage</a>
-          <a href="#membership" class="btn btn-outline">Join the Club</a>
+        <div class="eyebrow">Authentic Thai Massage · Members Club</div>
+        <h1>Restore Balance.<br/><em>Elevate Wellbeing.</em></h1>
+        <p class="hero-lede">Experience the healing art of authentic Thai massage in a serene, luxury environment. Designed to release tension, restore balance, and rejuvenate body and mind.</p>
+        <div class="hero-ctas">
+          <a href="#membership" class="btn-primary">Join the Club</a>
+          <a href="#locations" class="btn-outline">Book Your Massage</a>
         </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <h3>8</h3>
-            <p>Locations</p>
-          </div>
-          <div class="hero-stat">
-            <h3>7 Days</h3>
-            <p>Open Weekly</p>
-          </div>
-          <div class="hero-stat">
-            <h3>10+</h3>
-            <p>Treatments</p>
-          </div>
-          <div class="hero-stat">
-            <h3>5.0</h3>
-            <p>Google Rating</p>
-          </div>
-        </div>
-      </div>
-      <div class="hero-image">
-        <div class="hero-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80&auto=format" alt="Relaxing Thai massage treatment in a peaceful spa setting">
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ─── FEATURES BAR ─── -->
-  <div class="features-bar">
-    <div class="container">
-      <div class="features-grid">
-        <div class="feature-item">
-          <div class="feature-icon">🌿</div>
-          <h4>Authentic</h4>
-          <p>Genuine Thai therapists bringing traditional techniques passed down through generations</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">🧘</div>
-          <h4>Relaxing</h4>
-          <p>Designed to energise, revitalise and restore your body's natural balance</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">🌸</div>
-          <h4>Aromatic</h4>
-          <p>Premium essential oils and plant-based compounds for a complete sensory experience</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ─── ABOUT ─── -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-image">
-          <div class="about-image-placeholder">🌿</div>
-        </div>
-        <div class="about-content">
-          <span class="section-label">Our Story</span>
-          <h2>Revitalising Authentic Massage</h2>
-          <p>Welcome to Club Thai Massage. We believe everyone deserves to feel their best. Our team of experienced, genuine Thai therapists deliver authentic treatments that restore balance to your body and mind.</p>
-          <p>With eight locations across Melbourne and the Mornington Peninsula, we've made it easy to find relaxation close to home. And with our exclusive membership program, our regulars get the best of everything we offer.</p>
-          <div class="about-values">
-            <div class="about-value">
-              <div class="about-value-icon">🙌</div>
-              <div>
-                <h4>Traditional Techniques</h4>
-                <p>Authentic Thai massage methods combining assisted yoga with acupressure</p>
-              </div>
+        <div class="hero-features">
+          <div class="feature">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M7 12h10"/></svg></div>
+            <div class="feature-text">
+              <h4>Authentic</h4>
+              <p>Traditional Thai techniques</p>
             </div>
-            <div class="about-value">
-              <div class="about-value-icon">💆</div>
-              <div>
-                <h4>Personalised Care</h4>
-                <p>Every session tailored to your needs, whether it's relaxation or deep tissue relief</p>
-              </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L4 7v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V7l-8-5z"/></svg></div>
+            <div class="feature-text">
+              <h4>Expert Therapists</h4>
+              <p>Highly trained &amp; experienced</p>
             </div>
-            <div class="about-value">
-              <div class="about-value-icon">🏡</div>
-              <div>
-                <h4>Convenient Locations</h4>
-                <p>Eight welcoming studios open 7 days, 10am to 8:30pm</p>
-              </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h18M12 3v18"/></svg></div>
+            <div class="feature-text">
+              <h4>Premium Spaces</h4>
+              <p>Serene, private &amp; relaxing</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-7 8-13a8 8 0 1 0-16 0c0 6 8 13 8 13z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+            <div class="feature-text">
+              <h4>8 Locations</h4>
+              <p>Across Melbourne &amp; Mornington</p>
             </div>
           </div>
         </div>
@@ -1294,204 +1143,210 @@
     </div>
   </section>
 
-  <!-- ─── SERVICES ─── -->
-  <section class="services" id="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Our Treatments</span>
-        <h2>Services Designed for You</h2>
-        <p>From soothing relaxation to targeted deep tissue therapy, find the treatment that's right for your body</p>
+  <!-- ─── MEMBERSHIP BANNER (JOIN CTA + Monthly Prize Draw) ─── -->
+  <section class="membership-banner">
+    <div class="mb-grid">
+      <div class="mb-content">
+        <div class="mb-badge">Memberships Limited · Now Open</div>
+        <h2>Join CTM today.<br/><em>Win this month.</em></h2>
+        <p>Become a member and you're automatically entered into our monthly draw for an exclusive 4-hand massage at any of our locations. Plus you get priority booking, member-only discounts, free upgrades, and access to our private members events.</p>
+        <div class="mb-ctas">
+          <a href="#membership" class="btn-primary">Join Now</a>
+          <div class="mb-pricing">From only <strong>$15</strong> / month</div>
+        </div>
       </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-card-icon">💆</div>
-          <h3>Relaxation Massage</h3>
-          <p>Gentle, soothing massage to reduce stress and enhance wellbeing through slow, flowing movements.</p>
-          <div class="service-price">From $55 <span>/ 30 min</span></div>
-        </div>
-        <div class="service-card">
-          <div class="service-card-icon">💪</div>
-          <h3>Deep Tissue Massage</h3>
-          <p>Firm-pressure massage targeting deep muscle layers and knots to relieve chronic pain and improve mobility.</p>
-          <div class="service-price">From $60 <span>/ 30 min</span></div>
-        </div>
-        <div class="service-card">
-          <div class="service-card-icon">🪨</div>
-          <h3>Hot Stone Therapy</h3>
-          <p>Deeply relaxing therapy using heated stones to melt away tension, improve circulation and promote balance.</p>
-          <div class="service-price">From $60 <span>/ 30 min</span></div>
-        </div>
-        <div class="service-card">
-          <div class="service-card-icon">🧘</div>
-          <h3>Traditional Thai</h3>
-          <p>Combines assisted yoga with acupressure, incorporating stretching and pressure along energy lines to balance the body.</p>
-          <div class="service-price">From $60 <span>/ 30 min</span></div>
-        </div>
-        <div class="service-card">
-          <div class="service-card-icon">🌺</div>
-          <h3>Aromatherapy</h3>
-          <p>Essential oils enhance stress reduction, pain relief and mood improvement alongside traditional massage techniques.</p>
-          <div class="service-price">From $60 <span>/ 30 min</span></div>
-        </div>
-        <div class="service-card">
-          <div class="service-card-icon">🦶</div>
-          <h3>Reflexology</h3>
-          <p>Stimulates nerve function, enhances energy levels, improves circulation and induces deep relaxation.</p>
-          <div class="service-price">From $60 <span>/ 30 min</span></div>
-        </div>
-        <div class="service-card">
-          <div class="service-card-icon">🚿</div>
-          <h3>Vichy Shower</h3>
-          <p>Water pressure massage that aids lymphatic drainage, stimulates circulation and promotes detoxification.</p>
-          <div class="service-price">From $69 <span>/ 20 min</span></div>
-        </div>
-        <div class="service-card">
-          <div class="service-card-icon">✨</div>
-          <h3>Body Scrub</h3>
-          <p>Full-body exfoliation removing dead skin cells, boosting circulation and leaving skin soft and rejuvenated.</p>
-          <div class="service-price">From $99 <span>/ 45 min</span></div>
-        </div>
-        <div class="service-card">
-          <div class="service-card-icon">🏋️</div>
-          <h3>Sports Massage</h3>
-          <p>Targeted treatment for active bodies, addressing muscle tension, recovery and performance optimisation.</p>
-          <div class="service-price">From $60 <span>/ 30 min</span></div>
+
+      <div class="prize-card">
+        <div class="prize-label">This Month's Prize</div>
+        <h3 class="prize-title">A 4-hand <em>massage</em></h3>
+        <p class="prize-detail">Two therapists. Double the relief. One lucky member drawn at the end of each month, every month.</p>
+        <div class="prize-stats">
+          <div>
+            <div class="prize-stat-num">$220</div>
+            <div class="prize-stat-label">Prize Value</div>
+          </div>
+          <div>
+            <div class="prize-stat-num">90 min</div>
+            <div class="prize-stat-label">Treatment</div>
+          </div>
+          <div>
+            <div class="prize-stat-num">1 in 200</div>
+            <div class="prize-stat-label">Better than the Lotto</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── PRICING ─── -->
-  <section class="pricing" id="pricing">
+  <!-- ─── WELCOME / ABOUT ─── -->
+  <section class="welcome" id="about">
     <div class="container">
-      <div class="section-header">
-        <span class="section-label">Transparent Pricing</span>
-        <h2>Our Massage Rates</h2>
-        <p>Simple, transparent pricing across all locations. No hidden fees.</p>
+      <div class="welcome-grid">
+        <div class="welcome-text">
+          <div class="eyebrow">Welcome To</div>
+          <h2>Club Thai Massage</h2>
+          <p>We create a space where ancient healing traditions meet modern luxury. Our therapists tailor each treatment to your needs - helping you move better, feel lighter, and live more fully.</p>
+          <p>Eight premium locations across Melbourne and the Mornington Peninsula. Open seven days. Welcoming members and walk-ins alike.</p>
+          <ul class="welcome-checks">
+            <li>Relieves stress and muscle tension</li>
+            <li>Improves circulation and flexibility</li>
+            <li>Promotes deep relaxation and wellbeing</li>
+            <li>Authentic Thai therapists and techniques</li>
+          </ul>
+          <a href="#treatments" class="btn-primary">Explore Treatments</a>
+        </div>
+
+        <div class="welcome-images">
+          <div class="welcome-img"></div>
+          <div class="welcome-img"></div>
+          <div class="welcome-img"></div>
+        </div>
       </div>
-      <div class="pricing-table-wrapper">
-        <table class="pricing-table">
-          <thead>
-            <tr>
-              <th>Treatment</th>
-              <th>30 min</th>
-              <th>45 min</th>
-              <th>60 min</th>
-              <th>90 min</th>
-              <th>120 min</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Relaxation Massage</td>
-              <td>$55</td>
-              <td>$75</td>
-              <td>$85</td>
-              <td>$125</td>
-              <td>$165</td>
-            </tr>
-            <tr>
-              <td>Deep Tissue Massage</td>
-              <td>$60</td>
-              <td>$85</td>
-              <td>$95</td>
-              <td>$140</td>
-              <td>$180</td>
-            </tr>
-            <tr>
-              <td>Hot Stone Therapy</td>
-              <td>$60</td>
-              <td>$85</td>
-              <td>$95</td>
-              <td>$140</td>
-              <td>$170</td>
-            </tr>
-            <tr>
-              <td>Traditional Thai</td>
-              <td>$60</td>
-              <td>$85</td>
-              <td>$95</td>
-              <td>$145</td>
-              <td>$185</td>
-            </tr>
-            <tr>
-              <td>Aromatherapy</td>
-              <td>$60</td>
-              <td>$80</td>
-              <td>$85</td>
-              <td>$130</td>
-              <td>$170</td>
-            </tr>
-            <tr>
-              <td>Reflexology</td>
-              <td>$60</td>
-              <td>$85</td>
-              <td>$95</td>
-              <td>$145</td>
-              <td>$185</td>
-            </tr>
-            <tr>
-              <td>Sports Massage</td>
-              <td>$60</td>
-              <td>$85</td>
-              <td>$95</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="pricing-note">Prices may vary slightly by location. Spa packages and add-ons available at select locations.</p>
     </div>
   </section>
 
-  <!-- ─── MEMBERSHIP ─── -->
+  <!-- ─── TREATMENTS ─── -->
+  <section class="treatments" id="treatments">
+    <div class="container">
+      <div class="treatments-header">
+        <div>
+          <div class="eyebrow">Our Treatments</div>
+          <h2>Tailored Treatments,<br/><em>Lasting Results.</em></h2>
+        </div>
+        <p>From traditional Thai massage to oil therapy, hot stone, and foot reflexology, every treatment is designed to restore balance and enhance your wellbeing. Members save 10-20% on every booking.</p>
+      </div>
+
+      <div class="treatment-grid">
+        <div class="treatment-card">
+          <div class="treatment-img" style="background-image:url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&amp;fit=crop&amp;w=700&amp;q=80');"></div>
+          <div class="treatment-body">
+            <h3>Traditional Thai</h3>
+            <p>Deep stretching and acupressure to release tension and improve energy flow.</p>
+            <div class="treatment-price">From <strong>$95</strong></div>
+            <a href="#locations" class="treatment-book">Book Now</a>
+          </div>
+        </div>
+
+        <div class="treatment-card">
+          <div class="treatment-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&amp;fit=crop&amp;w=700&amp;q=80');"></div>
+          <div class="treatment-body">
+            <h3>Aromatherapy Oil</h3>
+            <p>Relaxing oil massage to calm the mind and nourish the body.</p>
+            <div class="treatment-price">From <strong>$85</strong></div>
+            <a href="#locations" class="treatment-book">Book Now</a>
+          </div>
+        </div>
+
+        <div class="treatment-card">
+          <div class="treatment-img" style="background-image:url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&amp;fit=crop&amp;w=700&amp;q=80');"></div>
+          <div class="treatment-body">
+            <h3>Hot Stone Therapy</h3>
+            <p>Heated stones to melt away stress and deeply relax tight muscles.</p>
+            <div class="treatment-price">From <strong>$95</strong></div>
+            <a href="#locations" class="treatment-book">Book Now</a>
+          </div>
+        </div>
+
+        <div class="treatment-card">
+          <div class="treatment-img" style="background-image:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&amp;fit=crop&amp;w=700&amp;q=80');"></div>
+          <div class="treatment-body">
+            <h3>Foot Reflexology</h3>
+            <p>Targeted pressure techniques to relieve fatigue and restore natural balance.</p>
+            <div class="treatment-price">From <strong>$75</strong></div>
+            <a href="#locations" class="treatment-book">Book Now</a>
+          </div>
+        </div>
+
+        <div class="treatment-card">
+          <div class="treatment-img" style="background-image:url('https://images.unsplash.com/photo-1591343395082-e120087004b4?auto=format&amp;fit=crop&amp;w=700&amp;q=80');"></div>
+          <div class="treatment-body">
+            <h3>Deep Tissue</h3>
+            <p>Firm pressure to target persistent knots and muscle fatigue.</p>
+            <div class="treatment-price">From <strong>$95</strong></div>
+            <a href="#locations" class="treatment-book">Book Now</a>
+          </div>
+        </div>
+
+        <div class="treatment-card">
+          <div class="treatment-img" style="background-image:url('https://images.unsplash.com/photo-1583416750470-965b2707b355?auto=format&amp;fit=crop&amp;w=700&amp;q=80');"></div>
+          <div class="treatment-body">
+            <h3>Vichy Shower</h3>
+            <p>Cascading warm water therapy paired with massage for ultimate restoration.</p>
+            <div class="treatment-price">From <strong>$149</strong></div>
+            <a href="#locations" class="treatment-book">Book Now</a>
+          </div>
+        </div>
+
+        <div class="treatment-card">
+          <div class="treatment-img" style="background-image:url('https://images.unsplash.com/photo-1591343395082-e120087004b4?auto=format&amp;fit=crop&amp;w=700&amp;q=80');filter:hue-rotate(-15deg);"></div>
+          <div class="treatment-body">
+            <h3>4-Hand Massage</h3>
+            <p>Two therapists working in perfect sync. Members only - and free if you win the monthly draw.</p>
+            <div class="treatment-price">Member exclusive</div>
+            <a href="#membership" class="treatment-book">Become a Member</a>
+          </div>
+        </div>
+
+        <div class="treatment-card">
+          <div class="treatment-img" style="background-image:url('https://images.unsplash.com/photo-1607008829749-c0f284a49841?auto=format&amp;fit=crop&amp;w=700&amp;q=80');"></div>
+          <div class="treatment-body">
+            <h3>Body Scrub</h3>
+            <p>Exfoliating body treatment with premium oils and natural ingredients.</p>
+            <div class="treatment-price">From <strong>$99</strong></div>
+            <a href="#locations" class="treatment-book">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── MEMBERSHIP TIERS ─── -->
   <section class="membership" id="membership">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Club Members</span>
-        <h2>Become a <em>Club</em> Member</h2>
-        <p>Join our exclusive membership and unlock priority booking, member-only discounts, free upgrades, and monthly prize draws across all our locations.</p>
+        <div class="eyebrow">The Club</div>
+        <h2>Become a <em>Member</em></h2>
+        <p>Join the Club and unlock the best of CTM - priority booking, member-only pricing, free upgrades, and automatic entry into the monthly 4-hand massage prize draw.</p>
       </div>
 
       <div class="tier-grid">
-        <!-- BASE TIER -->
+        <!-- Base Tier -->
         <div class="tier-card">
           <div class="tier-name">Club Member</div>
-          <p class="tier-tagline">Our everyday membership. Built-in savings on every visit, plus the perks that make a difference.</p>
+          <p class="tier-tagline">Built-in savings on every visit, plus the perks that make a difference.</p>
           <div class="tier-price">
-            <span class="tier-price-num">$10</span>
+            <span class="tier-price-num">$15</span>
             <span class="tier-price-period">/ month</span>
           </div>
-          <div class="tier-price-annual">or $99/year (save $21)</div>
+          <div class="tier-price-annual">or $149/year (save $31)</div>
 
           <ul class="tier-features">
             <li>10% off every booking, every visit</li>
-            <li>10% off all upgrades (4-hand, hot stone, Vichy)</li>
+            <li>10% off all upgrades (Vichy, hot stone, 4-hand)</li>
             <li>Priority booking - 24hrs early access</li>
-            <li>Preferred therapist locked in as your default</li>
+            <li>Preferred therapist locked in</li>
             <li>Birthday gift - free 30-min add-on</li>
             <li>Bring a friend - 25% off their first booking</li>
             <li>$20 referral credit for every new member</li>
-            <li>1 entry in monthly free-massage draw</li>
+            <li><strong>1 entry</strong> in monthly 4-hand massage draw</li>
             <li>Member-only flash specials</li>
-            <li class="muted">Larger discount on bookings</li>
-            <li class="muted">Premium prize draws</li>
-            <li class="muted">Club Rejuvenate priority access</li>
+            <li class="muted">Larger discount on every visit</li>
+            <li class="muted">Premium quarterly prize draws</li>
+            <li class="muted">Members-only events</li>
           </ul>
 
           <button class="tier-cta">Join as Club Member</button>
         </div>
 
-        <!-- GOLD TIER -->
+        <!-- Gold Tier -->
         <div class="tier-card gold">
           <div class="tier-name">Gold Member</div>
-          <p class="tier-tagline">For our regulars. Bigger savings, premium perks, and first pick on everything we offer.</p>
+          <p class="tier-tagline">For regulars. Bigger savings, premium perks, first pick on everything.</p>
           <div class="tier-price">
-            <span class="tier-price-num">$20</span>
+            <span class="tier-price-num">$25</span>
             <span class="tier-price-period">/ month</span>
           </div>
-          <div class="tier-price-annual">or $199/year (save $41)</div>
+          <div class="tier-price-annual">or $249/year (save $51)</div>
 
           <ul class="tier-features">
             <li><strong>20% off</strong> every booking, every visit</li>
@@ -1500,10 +1355,10 @@
             <li>Preferred therapist locked in</li>
             <li>Birthday gift - <strong>free 60-min upgrade</strong></li>
             <li>Bring a friend - 25% off + <strong>$20 credit for you</strong></li>
-            <li><strong>$40 referral credit</strong> for every new member</li>
-            <li><strong>3 entries</strong> in monthly free-massage draw</li>
-            <li><strong>Premium quarterly prize draws</strong> (luxury gifts, holidays)</li>
-            <li>Member-only events at Young St shop (drinks &amp; nibbles)</li>
+            <li><strong>$40 referral credit</strong> per new member</li>
+            <li><strong>3 entries</strong> in monthly 4-hand draw</li>
+            <li><strong>Premium quarterly prize draws</strong> (luxury, holidays)</li>
+            <li>Members-only events at Young St shop</li>
             <li>First invite to Club Rejuvenate when it opens</li>
             <li>Walk-in priority - skip the queue</li>
           </ul>
@@ -1512,44 +1367,7 @@
         </div>
       </div>
 
-      <!-- Universal member perks -->
-      <div class="members-perks">
-        <h3>What every member gets</h3>
-        <div class="perks-grid">
-          <div class="perk">
-            <div class="perk-icon">★</div>
-            <h4>Priority Booking</h4>
-            <p>See peak slots before the public can book</p>
-          </div>
-          <div class="perk">
-            <div class="perk-icon">$</div>
-            <h4>Better Pricing</h4>
-            <p>Save on every visit, every upgrade</p>
-          </div>
-          <div class="perk">
-            <div class="perk-icon">♥</div>
-            <h4>Your Therapist</h4>
-            <p>Lock in your favourite as your default</p>
-          </div>
-          <div class="perk">
-            <div class="perk-icon">⊕</div>
-            <h4>Birthday Gift</h4>
-            <p>A free upgrade in your birthday month</p>
-          </div>
-          <div class="perk">
-            <div class="perk-icon">⌂</div>
-            <h4>All 8 Locations</h4>
-            <p>One membership, every shop</p>
-          </div>
-          <div class="perk">
-            <div class="perk-icon">⌽</div>
-            <h4>Monthly Prizes</h4>
-            <p>Free 4-hand massages drawn every month</p>
-          </div>
-        </div>
-      </div>
-
-      <p class="membership-foot">Cancel anytime. No lock-in contract. Membership benefits start the day you join.</p>
+      <p style="text-align:center;margin-top:40px;font-size:0.82rem;color:var(--text-dim);">Cancel anytime. No lock-in contract. Membership benefits start the day you join.</p>
     </div>
   </section>
 
@@ -1557,268 +1375,146 @@
   <section class="locations" id="locations">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Visit Us</span>
-        <h2>Our Locations</h2>
-        <p>Eight welcoming studios across Melbourne and the Mornington Peninsula, all open 7 days a week</p>
+        <div class="eyebrow">Visit Us</div>
+        <h2>Eight <em>locations</em>.</h2>
+        <p>Across Melbourne and the Mornington Peninsula. All locations open 7 days a week, 10am to 8:30pm.</p>
       </div>
+
       <div class="locations-grid">
-
-        <!-- Sandringham -->
         <div class="location-card">
-          <div class="location-badge">Sandringham</div>
           <h3>Sandringham</h3>
-          <div class="location-detail">
-            <div class="location-detail-icon">📍</div>
-            <p>2/52 Bay Rd, Sandringham VIC 3191</p>
-          </div>
-          <div class="location-detail">
-            <div class="location-detail-icon">📞</div>
-            <p><a href="tel:0385965110">03 8596 5110</a></p>
-          </div>
-          <div class="location-detail">
-            <div class="location-detail-icon">🕐</div>
-            <p>Mon - Sun, 10:00 AM - 8:30 PM</p>
-          </div>
-          <div class="location-actions">
-            <a href="https://www.fresha.com" class="btn btn-primary btn-small" target="_blank">Book Online</a>
-            <a href="tel:0385965110" class="btn btn-outline btn-small">Call to Book</a>
+          <p class="addr">2/52 Bay Rd<br/>Sandringham VIC 3191</p>
+          <div class="hours">7 Days · 10am - 8:30pm</div>
+          <div class="actions">
+            <a href="https://www.fresha.com" target="_blank">Book Online</a>
+            <a href="tel:0385965110">Call</a>
           </div>
         </div>
 
-        <!-- Mornington -->
         <div class="location-card">
-          <div class="location-badge">Mornington</div>
           <h3>Mornington</h3>
-          <div class="location-detail">
-            <div class="location-detail-icon">📍</div>
-            <p>2/154 Main St, Mornington VIC 3931</p>
-          </div>
-          <div class="location-detail">
-            <div class="location-detail-icon">📞</div>
-            <p><a href="tel:0406111414">0406 111 414</a></p>
-          </div>
-          <div class="location-detail">
-            <div class="location-detail-icon">🕐</div>
-            <p>Mon - Sun, 10:00 AM - 8:30 PM</p>
-          </div>
-          <div class="location-actions">
-            <a href="https://www.fresha.com" class="btn btn-primary btn-small" target="_blank">Book Online</a>
-            <a href="tel:0406111414" class="btn btn-outline btn-small">Call to Book</a>
+          <p class="addr">2/154 Main St<br/>Mornington VIC 3931</p>
+          <div class="hours">7 Days · 10am - 8:30pm</div>
+          <div class="actions">
+            <a href="https://www.fresha.com" target="_blank">Book Online</a>
+            <a href="tel:0406111414">Call</a>
           </div>
         </div>
 
-        <!-- Frankston -->
         <div class="location-card">
-          <div class="location-badge">Frankston</div>
           <h3>Frankston</h3>
-          <div class="location-detail">
-            <div class="location-detail-icon">📍</div>
-            <p>2/44 Beach St, Frankston VIC 3199</p>
-          </div>
-          <div class="location-detail">
-            <div class="location-detail-icon">📞</div>
-            <p><a href="tel:0397832222">03 9783 2222</a></p>
-          </div>
-          <div class="location-detail">
-            <div class="location-detail-icon">🕐</div>
-            <p>Mon - Sun, 10:00 AM - 8:30 PM</p>
-          </div>
-          <div class="location-extras">
-            <span class="location-tag">Sauna</span>
-            <span class="location-tag">Vichy Shower</span>
-            <span class="location-tag">Spa Packages</span>
-          </div>
-          <div class="location-actions">
-            <a href="https://www.fresha.com" class="btn btn-primary btn-small" target="_blank">Book Online</a>
-            <a href="tel:0397832222" class="btn btn-outline btn-small">Call to Book</a>
+          <p class="addr">2/44 Beach St<br/>Frankston VIC 3199</p>
+          <div class="hours">Sauna · Vichy · Spa Packages</div>
+          <div class="actions">
+            <a href="https://www.fresha.com" target="_blank">Book Online</a>
+            <a href="tel:0397832222">Call</a>
           </div>
         </div>
 
-        <!-- Hastings -->
         <div class="location-card">
-          <div class="location-badge">Hastings</div>
           <h3>Hastings</h3>
-          <div class="location-detail">
-            <div class="location-detail-icon">📍</div>
-            <p>4/145 Salmon St, Hastings VIC 3915</p>
-          </div>
-          <div class="location-detail">
-            <div class="location-detail-icon">📞</div>
-            <p><a href="tel:0359026003">03 5902 6003</a></p>
-          </div>
-          <div class="location-detail">
-            <div class="location-detail-icon">🕐</div>
-            <p>Mon - Sun, 10:00 AM - 8:30 PM</p>
-          </div>
-          <div class="location-extras">
-            <span class="location-tag">Vichy Shower</span>
-            <span class="location-tag">Body Scrub</span>
-            <span class="location-tag">Spa Packages</span>
-            <span class="location-tag">Sports Massage</span>
-          </div>
-          <div class="location-actions">
-            <a href="https://www.fresha.com" class="btn btn-primary btn-small" target="_blank">Book Online</a>
-            <a href="tel:0359026003" class="btn btn-outline btn-small">Call to Book</a>
+          <p class="addr">4/145 Salmon St<br/>Hastings VIC 3915</p>
+          <div class="hours">Vichy · Body Scrub · Sports Massage</div>
+          <div class="actions">
+            <a href="https://www.fresha.com" target="_blank">Book Online</a>
+            <a href="tel:0359026003">Call</a>
           </div>
         </div>
 
-        <!-- Hampton -->
         <div class="location-card">
-          <div class="location-badge">Hampton</div>
           <h3>Hampton</h3>
-          <div class="location-detail">
-            <div class="location-detail-icon">📍</div>
-            <p>Hampton VIC</p>
-          </div>
-          <div class="location-detail">
-            <div class="location-detail-icon">🕐</div>
-            <p>Mon - Sun, 10:00 AM - 8:30 PM</p>
-          </div>
-          <div class="location-actions">
-            <a href="https://www.fresha.com" class="btn btn-primary btn-small" target="_blank">Book Online</a>
+          <p class="addr">Hampton VIC</p>
+          <div class="hours">7 Days · 10am - 8:30pm</div>
+          <div class="actions">
+            <a href="https://www.fresha.com" target="_blank">Book Online</a>
+            <a href="#" style="opacity:.5;">Coming Soon</a>
           </div>
         </div>
 
-        <!-- Brighton -->
         <div class="location-card">
-          <div class="location-badge">Brighton</div>
           <h3>Brighton</h3>
-          <div class="location-detail">
-            <div class="location-detail-icon">📍</div>
-            <p>Brighton VIC</p>
-          </div>
-          <div class="location-detail">
-            <div class="location-detail-icon">🕐</div>
-            <p>Mon - Sun, 10:00 AM - 8:30 PM</p>
-          </div>
-          <div class="location-actions">
-            <a href="https://www.fresha.com" class="btn btn-primary btn-small" target="_blank">Book Online</a>
+          <p class="addr">Brighton VIC</p>
+          <div class="hours">7 Days · 10am - 8:30pm</div>
+          <div class="actions">
+            <a href="https://www.fresha.com" target="_blank">Book Online</a>
+            <a href="#" style="opacity:.5;">Coming Soon</a>
           </div>
         </div>
 
-        <!-- Beaumaris -->
         <div class="location-card">
-          <div class="location-badge">Beaumaris</div>
           <h3>Beaumaris</h3>
-          <div class="location-detail">
-            <div class="location-detail-icon">📍</div>
-            <p>Beaumaris VIC</p>
-          </div>
-          <div class="location-detail">
-            <div class="location-detail-icon">🕐</div>
-            <p>Mon - Sun, 10:00 AM - 8:30 PM</p>
-          </div>
-          <div class="location-actions">
-            <a href="https://www.fresha.com" class="btn btn-primary btn-small" target="_blank">Book Online</a>
+          <p class="addr">Beaumaris VIC</p>
+          <div class="hours">7 Days · 10am - 8:30pm</div>
+          <div class="actions">
+            <a href="https://www.fresha.com" target="_blank">Book Online</a>
+            <a href="#" style="opacity:.5;">Coming Soon</a>
           </div>
         </div>
 
-        <!-- Mentone -->
         <div class="location-card">
-          <div class="location-badge">Mentone</div>
           <h3>Mentone</h3>
-          <div class="location-detail">
-            <div class="location-detail-icon">📍</div>
-            <p>Mentone VIC</p>
-          </div>
-          <div class="location-detail">
-            <div class="location-detail-icon">🕐</div>
-            <p>Mon - Sun, 10:00 AM - 8:30 PM</p>
-          </div>
-          <div class="location-actions">
-            <a href="https://www.fresha.com" class="btn btn-primary btn-small" target="_blank">Book Online</a>
+          <p class="addr">Mentone VIC</p>
+          <div class="hours">7 Days · 10am - 8:30pm</div>
+          <div class="actions">
+            <a href="https://www.fresha.com" target="_blank">Book Online</a>
+            <a href="#" style="opacity:.5;">Coming Soon</a>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ─── TESTIMONIALS ─── -->
-  <section class="testimonials" id="reviews">
+  <!-- ─── REVIEWS ─── -->
+  <section class="reviews" id="reviews">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">What Our Clients Say</span>
-        <h2>Real Reviews, Real Results</h2>
-        <p>Hear from our valued clients across all locations</p>
+        <div class="eyebrow">What Our Clients Say</div>
+        <h2>Real Reviews,<br/><em>Real Results.</em></h2>
       </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"Absolutely amazing experience. The therapists are incredibly skilled and the atmosphere is so relaxing. I've been coming back every fortnight."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">CA</div>
-            <div>
-              <div class="testimonial-name">Craig Allen</div>
-              <div class="testimonial-location">Sandringham</div>
-            </div>
-          </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <blockquote>Absolutely incredible experience. The best massage I've had - and the members club is brilliant value. Worth every cent.</blockquote>
+          <cite>— Sarah L., Mornington</cite>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"Grace is an exceptional therapist. Her deep tissue work is the best I've had anywhere. The Mornington location is beautifully set up."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">HF</div>
-            <div>
-              <div class="testimonial-name">Helen Fatur</div>
-              <div class="testimonial-location">Mornington</div>
-            </div>
-          </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <blockquote>The therapists are so skilled and the new space is pure relaxation. Won the monthly 4-hand draw too - couldn't recommend more highly.</blockquote>
+          <cite>— James T., Sandringham</cite>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"Amy at Frankston is incredible. The spa package with the Vichy shower was such a treat. Best massage I've ever had, hands down."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">ME</div>
-            <div>
-              <div class="testimonial-name">Matt Evans</div>
-              <div class="testimonial-location">Frankston</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"I've tried many massage places and nothing compares. The authentic Thai technique combined with the aromatherapy oils is pure bliss."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">NG</div>
-            <div>
-              <div class="testimonial-name">Nick Grounds</div>
-              <div class="testimonial-location">Sandringham</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"Sonya at Mornington is fantastic. I had the worst knots in my shoulders and she worked them all out. Will definitely be back."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">JL</div>
-            <div>
-              <div class="testimonial-name">Jennifer Lee</div>
-              <div class="testimonial-location">Mornington</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"The Hastings location has everything - great massage, Vichy shower, body scrub. The spa package is incredible value for what you get."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">KM</div>
-            <div>
-              <div class="testimonial-name">Karen Mitchell</div>
-              <div class="testimonial-location">Hastings</div>
-            </div>
-          </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <blockquote>I leave every session feeling lighter, calmer and recharged. The membership has changed how I look after myself.</blockquote>
+          <cite>— Emily R., Frankston</cite>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── PROMO / CTA ─── -->
-  <section class="promo">
+  <!-- ─── STATS BAR ─── -->
+  <section class="stats">
     <div class="container">
-      <h2>Ready to Unwind?</h2>
-      <p>Book your massage today and experience the difference authentic Thai therapy makes.</p>
-      <a href="#locations" class="btn btn-primary">Find Your Nearest Location</a>
+      <div class="stats-grid">
+        <div class="stats-item">
+          <h4>8 Locations</h4>
+          <p>Across Melbourne &amp; Mornington Peninsula</p>
+        </div>
+        <div class="stats-item">
+          <h4>Open 7 Days</h4>
+          <p>Convenient hours, every day</p>
+        </div>
+        <div class="stats-item">
+          <h4>Experienced Team</h4>
+          <p>Trusted Thai professionals</p>
+        </div>
+        <div class="stats-item">
+          <h4>Thousands Trust Us</h4>
+          <p>5-star rated, 8,000+ regulars</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1827,44 +1523,46 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <h3>Club Thai Massage</h3>
-          <p>Revitalising authentic massage across Melbourne and the Mornington Peninsula. Genuine Thai therapists, premium treatments, exclusive member benefits, open 7 days.</p>
+          <img src="logo-ctm.png" alt="Club Thai Massage" />
+          <p>Premium authentic Thai massage in a luxury setting. Rebalance. Rejuvenate. Reconnect.</p>
         </div>
+
         <div class="footer-col">
           <h4>Quick Links</h4>
           <a href="#about">About Us</a>
-          <a href="#services">Services</a>
+          <a href="#treatments">Treatments</a>
           <a href="#membership">Club Membership</a>
-          <a href="#pricing">Pricing</a>
           <a href="#locations">Locations</a>
           <a href="#reviews">Reviews</a>
           <a href="/careers">Careers - Now Hiring</a>
         </div>
+
         <div class="footer-col">
-          <h4>Locations</h4>
-          <a href="#locations">Sandringham</a>
-          <a href="#locations">Mornington</a>
-          <a href="#locations">Frankston</a>
-          <a href="#locations">Hastings</a>
-          <a href="#locations">Hampton</a>
-          <a href="#locations">Brighton</a>
-          <a href="#locations">Beaumaris</a>
-          <a href="#locations">Mentone</a>
+          <h4>Treatments</h4>
+          <a href="#treatments">Traditional Thai</a>
+          <a href="#treatments">Aromatherapy Oil</a>
+          <a href="#treatments">Foot Reflexology</a>
+          <a href="#treatments">Hot Stone Therapy</a>
+          <a href="#treatments">Vichy Shower</a>
+          <a href="#treatments">4-Hand Massage</a>
         </div>
+
         <div class="footer-col">
-          <h4>Contact</h4>
-          <a href="mailto:hatthathaimassage@gmail.com">hatthathaimassage@gmail.com</a>
-          <a href="https://www.facebook.com/profile.php?id=100093300190448" target="_blank">Facebook</a>
-          <a href="https://www.instagram.com" target="_blank">Instagram</a>
+          <h4>Join the Club</h4>
+          <a href="#membership">Become a Member</a>
+          <a href="#membership">Member Benefits</a>
+          <a href="#membership">Monthly Prize Draw</a>
+          <a href="https://www.fresha.com" target="_blank">Book Now</a>
         </div>
       </div>
-      <div class="footer-hiring">
-        <strong>Staff Wanted</strong>
-        Industry best conditions - training available. Melbourne's biggest and best Thai massage group.
-      </div>
+
       <div class="footer-bottom">
-        <span>&copy; 2026 Club Thai Massage. All rights reserved.</span>
-        <span>Open 7 Days | 10:00 AM - 8:30 PM</span>
+        <span>© 2026 Club Thai Massage. All rights reserved. · <a href="#">Privacy</a> · <a href="#">Terms</a></span>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="Facebook">fb</a>
+          <a href="https://www.fresha.com" target="_blank" aria-label="Fresha">f</a>
+        </div>
       </div>
     </div>
   </footer>
