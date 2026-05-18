@@ -1075,143 +1075,175 @@
       .prize-stats { flex-direction: column; gap: 16px; }
     }
 
-    /* ─── STAFF GALLERY (1st position) ─── */
+    /* ─── STAFF GALLERY (1st position - full hero slideshow) ─── */
     .staff-gallery {
       position: relative;
       background: var(--bg-darker);
-      padding: 80px 0 100px;
+      height: calc(100vh - 100px);
+      min-height: 640px;
       overflow: hidden;
     }
 
-    .staff-gallery .container { position: relative; z-index: 2; }
+    /* Slideshow stage */
+    .gallery-stage {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
 
-    .staff-gallery .gallery-header {
+    .gallery-slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      animation: slide-fade 24s infinite;
+    }
+
+    .gallery-slide:nth-child(1) { animation-delay: 0s; }
+    .gallery-slide:nth-child(2) { animation-delay: 6s; }
+    .gallery-slide:nth-child(3) { animation-delay: 12s; }
+    .gallery-slide:nth-child(4) { animation-delay: 18s; }
+
+    @keyframes slide-fade {
+      0%, 4% { opacity: 0; transform: scale(1.03); }
+      8%, 25% { opacity: 1; transform: scale(1.0); }
+      29%, 100% { opacity: 0; transform: scale(1.0); }
+    }
+
+    /* Dark overlay for text legibility */
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(180deg, rgba(17,15,13,0.6) 0%, rgba(17,15,13,0.3) 30%, rgba(17,15,13,0.85) 100%);
+      pointer-events: none;
+    }
+
+    /* Centered text content */
+    .gallery-content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      max-width: 760px;
-      margin: 0 auto 50px;
+      padding: 80px 32px 60px;
+      max-width: 980px;
+      margin: 0 auto;
     }
 
-    .staff-gallery .gallery-header h2 {
-      font-size: clamp(2.6rem, 5.5vw, 4.6rem);
-      margin: 18px 0 18px;
+    .gallery-content .eyebrow {
+      margin-bottom: 22px;
+    }
+
+    .gallery-content h2 {
+      font-size: clamp(3rem, 7vw, 6rem);
+      color: var(--text);
+      margin-bottom: 24px;
       line-height: 1;
+      letter-spacing: -1.5px;
     }
 
-    .staff-gallery .gallery-header h2 em {
+    .gallery-content h2 em {
       font-style: italic;
       color: var(--gold);
       font-weight: 300;
     }
 
-    .staff-gallery .gallery-header p {
+    .gallery-content .gallery-lede {
       font-size: 1.1rem;
-      color: var(--text-soft);
-      line-height: 1.65;
-      max-width: 580px;
-      margin: 0 auto;
-    }
-
-    /* The scrolling track */
-    .gallery-marquee {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-      mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
-      -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
-    }
-
-    .gallery-track {
-      display: flex;
-      gap: 22px;
-      width: max-content;
-      animation: marquee-scroll 40s linear infinite;
-    }
-
-    .gallery-track:hover { animation-play-state: paused; }
-
-    @keyframes marquee-scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(calc(-50% - 11px)); }
-    }
-
-    .gallery-card {
-      width: 360px;
-      height: 460px;
-      flex-shrink: 0;
-      background-size: cover;
-      background-position: center;
-      border-radius: 4px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .gallery-card::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 60%, rgba(17,15,13,0.75) 100%);
-    }
-
-    .gallery-card .caption {
-      position: absolute;
-      left: 24px;
-      bottom: 22px;
-      right: 24px;
-      z-index: 2;
       color: var(--text);
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem;
-      font-style: italic;
-      letter-spacing: 0;
-      line-height: 1.2;
+      line-height: 1.65;
+      max-width: 600px;
+      margin: 0 auto 36px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.6);
     }
 
-    .gallery-card .caption small {
-      display: block;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.7rem;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--gold);
-      font-style: normal;
-      margin-bottom: 6px;
-      font-weight: 700;
-    }
-
-    /* Trust badges row */
-    .staff-trust {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-top: 60px;
-      padding-top: 40px;
+    /* Bottom trust bar (overlay on the slideshow) */
+    .gallery-trust-bar {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+      background: rgba(17,15,13,0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-top: 1px solid var(--border);
-      flex-wrap: wrap;
+      padding: 22px 32px;
     }
 
-    .staff-trust-item {
-      text-align: center;
+    .gallery-trust-bar .inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      align-items: center;
     }
 
-    .staff-trust-item h4 {
+    .gallery-trust-bar .trust {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .gallery-trust-bar .trust strong {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
+      font-size: 1.6rem;
       color: var(--gold);
       line-height: 1;
-      margin-bottom: 4px;
+      font-weight: 500;
       letter-spacing: -0.5px;
     }
 
-    .staff-trust-item p {
-      font-size: 0.75rem;
+    .gallery-trust-bar .trust span {
+      font-size: 0.7rem;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--text-dim);
+      color: var(--text-soft);
+      line-height: 1.3;
     }
 
-    @media (max-width: 640px) {
-      .gallery-card { width: 280px; height: 380px; }
-      .staff-trust { gap: 24px; }
+    /* Slide indicator dots */
+    .gallery-dots {
+      position: absolute;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      gap: 10px;
+    }
+
+    .gallery-dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(240,232,220,0.3);
+      transition: background 0.5s;
+    }
+
+    .gallery-dots span.active {
+      background: var(--gold);
+      width: 28px;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 768px) {
+      .staff-gallery { min-height: 540px; }
+      .gallery-trust-bar .inner { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .gallery-dots { bottom: 130px; }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-content h2 { font-size: 2.4rem; }
+      .gallery-content .gallery-lede { font-size: 0.95rem; }
     }
   </style>
 </head>
@@ -1240,80 +1272,58 @@
     </div>
   </header>
 
-  <!-- ─── STAFF GALLERY (1st position - NEW) ─── -->
+  <!-- ─── STAFF GALLERY (1st position - full hero slideshow) ─── -->
   <section class="staff-gallery">
-    <div class="container">
-      <div class="gallery-header">
-        <div class="eyebrow">Meet the Team</div>
-        <h2>Best in the <em>industry</em>.</h2>
-        <p>Authentic Thai therapists across all eight Club Thai Massage locations. Trained, trusted, and ready to look after you. Members get first pick of their preferred therapist - every booking, every time.</p>
-      </div>
+    <!-- Background slideshow stage -->
+    <div class="gallery-stage">
+      <div class="gallery-slide" style="background-image:url('assets/team-group.png');"></div>
+      <div class="gallery-slide" style="background-image:url('assets/team-duo.png');"></div>
+      <div class="gallery-slide" style="background-image:url('assets/treatment-room.png');"></div>
+      <div class="gallery-slide" style="background-image:url('assets/corridor.png');"></div>
     </div>
 
-    <div class="gallery-marquee">
-      <div class="gallery-track">
-        <!-- First pass -->
-        <div class="gallery-card" style="background-image:url('assets/team-group.png');">
-          <div class="caption"><small>Our Team</small>Five star therapists, every shop.</div>
-        </div>
-        <div class="gallery-card" style="background-image:url('assets/team-duo.png');">
-          <div class="caption"><small>Channy &amp; Lead Therapist</small>Years of expertise on every table.</div>
-        </div>
-        <div class="gallery-card" style="background-image:url('assets/treatment-room.png');">
-          <div class="caption"><small>Premium Spaces</small>Designed for deep restoration.</div>
-        </div>
-        <div class="gallery-card" style="background-image:url('assets/team-group.png');background-position:left center;">
-          <div class="caption"><small>Authentic Thai</small>Traditional techniques. Modern luxury.</div>
-        </div>
-        <div class="gallery-card" style="background-image:url('assets/team-duo.png');background-position:right center;">
-          <div class="caption"><small>Members First</small>Priority booking with your favourite.</div>
-        </div>
-        <div class="gallery-card" style="background-image:url('assets/corridor.png');">
-          <div class="caption"><small>8 Locations</small>Across Melbourne &amp; Mornington.</div>
-        </div>
-        <!-- Second pass (mirror for seamless loop) -->
-        <div class="gallery-card" style="background-image:url('assets/team-group.png');">
-          <div class="caption"><small>Our Team</small>Five star therapists, every shop.</div>
-        </div>
-        <div class="gallery-card" style="background-image:url('assets/team-duo.png');">
-          <div class="caption"><small>Channy &amp; Lead Therapist</small>Years of expertise on every table.</div>
-        </div>
-        <div class="gallery-card" style="background-image:url('assets/treatment-room.png');">
-          <div class="caption"><small>Premium Spaces</small>Designed for deep restoration.</div>
-        </div>
-        <div class="gallery-card" style="background-image:url('assets/team-group.png');background-position:left center;">
-          <div class="caption"><small>Authentic Thai</small>Traditional techniques. Modern luxury.</div>
-        </div>
-        <div class="gallery-card" style="background-image:url('assets/team-duo.png');background-position:right center;">
-          <div class="caption"><small>Members First</small>Priority booking with your favourite.</div>
-        </div>
-        <div class="gallery-card" style="background-image:url('assets/corridor.png');">
-          <div class="caption"><small>8 Locations</small>Across Melbourne &amp; Mornington.</div>
-        </div>
-      </div>
+    <!-- Dark overlay -->
+    <div class="gallery-overlay"></div>
+
+    <!-- Centered hero content -->
+    <div class="gallery-content">
+      <div class="eyebrow">Meet the Team</div>
+      <h2>Best in the <em>industry</em>.</h2>
+      <p class="gallery-lede">Authentic Thai therapists across all eight Club Thai Massage locations. Trained, trusted, and ready to look after you. Members get first pick of their preferred therapist - every booking, every time.</p>
+      <a href="#membership" class="btn-primary">Join the Club</a>
     </div>
 
-    <div class="container">
-      <div class="staff-trust">
-        <div class="staff-trust-item">
-          <h4>50+</h4>
-          <p>Trained Therapists</p>
-        </div>
-        <div class="staff-trust-item">
-          <h4>15+ Years</h4>
-          <p>Trading History</p>
-        </div>
-        <div class="staff-trust-item">
-          <h4>8,000+</h4>
-          <p>Regular Clients</p>
-        </div>
-        <div class="staff-trust-item">
-          <h4>5.0 ★</h4>
-          <p>Google Rating</p>
-        </div>
+    <!-- Slide indicator dots -->
+    <div class="gallery-dots">
+      <span class="active"></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Trust bar at bottom -->
+    <div class="gallery-trust-bar">
+      <div class="inner">
+        <div class="trust"><strong>50+</strong><span>Trained<br/>Therapists</span></div>
+        <div class="trust"><strong>15+ Years</strong><span>Trading<br/>History</span></div>
+        <div class="trust"><strong>8,000+</strong><span>Regular<br/>Clients</span></div>
+        <div class="trust"><strong>5.0 ★</strong><span>Google<br/>Rating</span></div>
       </div>
     </div>
   </section>
+
+  <script>
+    // Slide indicator sync with CSS animation
+    (function() {
+      const dots = document.querySelectorAll('.gallery-dots span');
+      let idx = 0;
+      setInterval(function() {
+        dots.forEach(d => d.classList.remove('active'));
+        idx = (idx + 1) % dots.length;
+        dots[idx].classList.add('active');
+      }, 6000);
+    })();
+  </script>
 
   <!-- ─── MEMBERSHIP BANNER (2nd position - pushed up per Tom) ─── -->
   <section class="membership-banner">
