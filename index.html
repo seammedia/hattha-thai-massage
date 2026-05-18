@@ -1074,6 +1074,145 @@
       .tier-grid { grid-template-columns: 1fr; }
       .prize-stats { flex-direction: column; gap: 16px; }
     }
+
+    /* ─── STAFF GALLERY (1st position) ─── */
+    .staff-gallery {
+      position: relative;
+      background: var(--bg-darker);
+      padding: 80px 0 100px;
+      overflow: hidden;
+    }
+
+    .staff-gallery .container { position: relative; z-index: 2; }
+
+    .staff-gallery .gallery-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 50px;
+    }
+
+    .staff-gallery .gallery-header h2 {
+      font-size: clamp(2.6rem, 5.5vw, 4.6rem);
+      margin: 18px 0 18px;
+      line-height: 1;
+    }
+
+    .staff-gallery .gallery-header h2 em {
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 300;
+    }
+
+    .staff-gallery .gallery-header p {
+      font-size: 1.1rem;
+      color: var(--text-soft);
+      line-height: 1.65;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    /* The scrolling track */
+    .gallery-marquee {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+    }
+
+    .gallery-track {
+      display: flex;
+      gap: 22px;
+      width: max-content;
+      animation: marquee-scroll 40s linear infinite;
+    }
+
+    .gallery-track:hover { animation-play-state: paused; }
+
+    @keyframes marquee-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-50% - 11px)); }
+    }
+
+    .gallery-card {
+      width: 360px;
+      height: 460px;
+      flex-shrink: 0;
+      background-size: cover;
+      background-position: center;
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gallery-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(17,15,13,0.75) 100%);
+    }
+
+    .gallery-card .caption {
+      position: absolute;
+      left: 24px;
+      bottom: 22px;
+      right: 24px;
+      z-index: 2;
+      color: var(--text);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-style: italic;
+      letter-spacing: 0;
+      line-height: 1.2;
+    }
+
+    .gallery-card .caption small {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-style: normal;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    /* Trust badges row */
+    .staff-trust {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .staff-trust-item {
+      text-align: center;
+    }
+
+    .staff-trust-item h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 4px;
+      letter-spacing: -0.5px;
+    }
+
+    .staff-trust-item p {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    @media (max-width: 640px) {
+      .gallery-card { width: 280px; height: 380px; }
+      .staff-trust { gap: 24px; }
+    }
   </style>
 </head>
 <body>
@@ -1101,7 +1240,117 @@
     </div>
   </header>
 
-  <!-- ─── HERO ─── -->
+  <!-- ─── STAFF GALLERY (1st position - NEW) ─── -->
+  <section class="staff-gallery">
+    <div class="container">
+      <div class="gallery-header">
+        <div class="eyebrow">Meet the Team</div>
+        <h2>Best in the <em>industry</em>.</h2>
+        <p>Authentic Thai therapists across all eight Club Thai Massage locations. Trained, trusted, and ready to look after you. Members get first pick of their preferred therapist - every booking, every time.</p>
+      </div>
+    </div>
+
+    <div class="gallery-marquee">
+      <div class="gallery-track">
+        <!-- First pass -->
+        <div class="gallery-card" style="background-image:url('assets/team-group.png');">
+          <div class="caption"><small>Our Team</small>Five star therapists, every shop.</div>
+        </div>
+        <div class="gallery-card" style="background-image:url('assets/team-duo.png');">
+          <div class="caption"><small>Channy &amp; Lead Therapist</small>Years of expertise on every table.</div>
+        </div>
+        <div class="gallery-card" style="background-image:url('assets/treatment-room.png');">
+          <div class="caption"><small>Premium Spaces</small>Designed for deep restoration.</div>
+        </div>
+        <div class="gallery-card" style="background-image:url('assets/team-group.png');background-position:left center;">
+          <div class="caption"><small>Authentic Thai</small>Traditional techniques. Modern luxury.</div>
+        </div>
+        <div class="gallery-card" style="background-image:url('assets/team-duo.png');background-position:right center;">
+          <div class="caption"><small>Members First</small>Priority booking with your favourite.</div>
+        </div>
+        <div class="gallery-card" style="background-image:url('assets/corridor.png');">
+          <div class="caption"><small>8 Locations</small>Across Melbourne &amp; Mornington.</div>
+        </div>
+        <!-- Second pass (mirror for seamless loop) -->
+        <div class="gallery-card" style="background-image:url('assets/team-group.png');">
+          <div class="caption"><small>Our Team</small>Five star therapists, every shop.</div>
+        </div>
+        <div class="gallery-card" style="background-image:url('assets/team-duo.png');">
+          <div class="caption"><small>Channy &amp; Lead Therapist</small>Years of expertise on every table.</div>
+        </div>
+        <div class="gallery-card" style="background-image:url('assets/treatment-room.png');">
+          <div class="caption"><small>Premium Spaces</small>Designed for deep restoration.</div>
+        </div>
+        <div class="gallery-card" style="background-image:url('assets/team-group.png');background-position:left center;">
+          <div class="caption"><small>Authentic Thai</small>Traditional techniques. Modern luxury.</div>
+        </div>
+        <div class="gallery-card" style="background-image:url('assets/team-duo.png');background-position:right center;">
+          <div class="caption"><small>Members First</small>Priority booking with your favourite.</div>
+        </div>
+        <div class="gallery-card" style="background-image:url('assets/corridor.png');">
+          <div class="caption"><small>8 Locations</small>Across Melbourne &amp; Mornington.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="staff-trust">
+        <div class="staff-trust-item">
+          <h4>50+</h4>
+          <p>Trained Therapists</p>
+        </div>
+        <div class="staff-trust-item">
+          <h4>15+ Years</h4>
+          <p>Trading History</p>
+        </div>
+        <div class="staff-trust-item">
+          <h4>8,000+</h4>
+          <p>Regular Clients</p>
+        </div>
+        <div class="staff-trust-item">
+          <h4>5.0 ★</h4>
+          <p>Google Rating</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── MEMBERSHIP BANNER (2nd position - pushed up per Tom) ─── -->
+  <section class="membership-banner">
+    <div class="mb-grid">
+      <div class="mb-content">
+        <div class="mb-badge">Memberships Limited · Now Open</div>
+        <h2>Join CTM today.<br/><em>Win this month.</em></h2>
+        <p>Become a member and you're automatically entered into our monthly draw for an exclusive 4-hand massage at any of our locations. Plus you get priority booking, member-only discounts, free upgrades, and access to our private members events.</p>
+        <div class="mb-ctas">
+          <a href="#membership" class="btn-primary">Join Now</a>
+          <div class="mb-pricing">From only <strong>$15</strong> / month</div>
+        </div>
+      </div>
+
+      <div class="prize-card">
+        <div class="prize-label">This Month's Prize</div>
+        <h3 class="prize-title">A 4-hand <em>massage</em></h3>
+        <p class="prize-detail">Two therapists. Double the relief. One lucky member drawn at the end of each month, every month.</p>
+        <div class="prize-stats">
+          <div>
+            <div class="prize-stat-num">$220</div>
+            <div class="prize-stat-label">Prize Value</div>
+          </div>
+          <div>
+            <div class="prize-stat-num">90 min</div>
+            <div class="prize-stat-label">Treatment</div>
+          </div>
+          <div>
+            <div class="prize-stat-num">1 in 200</div>
+            <div class="prize-stat-label">Better than the Lotto</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── HERO (3rd position - pushed down per Tom) ─── -->
   <section class="hero">
     <div class="container">
       <div class="hero-content">
@@ -1141,41 +1390,6 @@
               <h4>8 Locations</h4>
               <p>Across Melbourne &amp; Mornington</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── MEMBERSHIP BANNER (JOIN CTA + Monthly Prize Draw) ─── -->
-  <section class="membership-banner">
-    <div class="mb-grid">
-      <div class="mb-content">
-        <div class="mb-badge">Memberships Limited · Now Open</div>
-        <h2>Join CTM today.<br/><em>Win this month.</em></h2>
-        <p>Become a member and you're automatically entered into our monthly draw for an exclusive 4-hand massage at any of our locations. Plus you get priority booking, member-only discounts, free upgrades, and access to our private members events.</p>
-        <div class="mb-ctas">
-          <a href="#membership" class="btn-primary">Join Now</a>
-          <div class="mb-pricing">From only <strong>$15</strong> / month</div>
-        </div>
-      </div>
-
-      <div class="prize-card">
-        <div class="prize-label">This Month's Prize</div>
-        <h3 class="prize-title">A 4-hand <em>massage</em></h3>
-        <p class="prize-detail">Two therapists. Double the relief. One lucky member drawn at the end of each month, every month.</p>
-        <div class="prize-stats">
-          <div>
-            <div class="prize-stat-num">$220</div>
-            <div class="prize-stat-label">Prize Value</div>
-          </div>
-          <div>
-            <div class="prize-stat-num">90 min</div>
-            <div class="prize-stat-label">Treatment</div>
-          </div>
-          <div>
-            <div class="prize-stat-num">1 in 200</div>
-            <div class="prize-stat-label">Better than the Lotto</div>
           </div>
         </div>
       </div>
