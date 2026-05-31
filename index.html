@@ -913,6 +913,40 @@
 
     .location-card .actions a:last-child:hover { border-color: var(--gold); color: var(--gold); }
 
+    .location-card .qr {
+      display: block;
+      width: 130px;
+      margin: 0 auto 20px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 22px rgba(0,0,0,0.35);
+    }
+    .location-card .qr img { width: 100%; height: auto; display: block; }
+    .location-card .qr-label {
+      text-align: center;
+      font-size: 0.68rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin: -8px 0 18px;
+    }
+
+    .award-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 26px;
+    }
+    .award-badge img { width: 74px; height: auto; }
+    .award-badge span {
+      font-size: 0.82rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-soft);
+    }
+    .award-badge strong { color: var(--gold); font-weight: 600; }
+
     /* ─── REVIEWS ─── */
     .reviews {
       background: var(--bg-section);
@@ -1624,9 +1658,11 @@
           <h3>Sandringham</h3>
           <p class="addr">2/52 Bay Rd<br/>Sandringham VIC 3191</p>
           <div class="hours">7 Days · 10am - 8:30pm</div>
+          <div class="qr"><img src="assets/qr/qr-sandringham.png" alt="Scan to book online at Club Thai Massage Sandringham" loading="lazy"/></div>
+          <div class="qr-label">Scan to book</div>
           <div class="actions">
-            <a href="https://www.fresha.com" target="_blank">Book Online</a>
-            <a href="tel:0385965110">Call</a>
+            <a href="https://www.fresha.com" target="_blank" rel="noopener">Book Online</a>
+            <a href="tel:0397832222">Call</a>
           </div>
         </div>
 
@@ -1634,9 +1670,11 @@
           <h3>Mornington</h3>
           <p class="addr">27 Yuilles Rd<br/>Mornington VIC 3931</p>
           <div class="hours">7 Days · 10am - 8:30pm</div>
+          <div class="qr"><img src="assets/qr/qr-mornington.png" alt="Scan to book online at Club Thai Massage Mornington" loading="lazy"/></div>
+          <div class="qr-label">Scan to book</div>
           <div class="actions">
-            <a href="https://www.fresha.com" target="_blank">Book Online</a>
-            <a href="tel:0406111414">Call</a>
+            <a href="https://www.fresha.com" target="_blank" rel="noopener">Book Online</a>
+            <a href="tel:0397832222">Call</a>
           </div>
         </div>
 
@@ -1644,8 +1682,10 @@
           <h3>Frankston</h3>
           <p class="addr">2/44 Beach St<br/>Frankston VIC 3199</p>
           <div class="hours">Sauna · Vichy · Spa Packages</div>
+          <div class="qr"><img src="assets/qr/qr-frankston.png" alt="Scan to book online at Club Thai Massage Frankston" loading="lazy"/></div>
+          <div class="qr-label">Scan to book</div>
           <div class="actions">
-            <a href="https://www.fresha.com" target="_blank">Book Online</a>
+            <a href="https://www.fresha.com" target="_blank" rel="noopener">Book Online</a>
             <a href="tel:0397832222">Call</a>
           </div>
         </div>
@@ -1654,9 +1694,11 @@
           <h3>Hampton</h3>
           <p class="addr">481 Bluff Rd<br/>Hampton VIC</p>
           <div class="hours">7 Days · 10am - 8:30pm</div>
+          <div class="qr"><img src="assets/qr/qr-hampton.png" alt="Scan to book online at Club Thai Massage Hampton" loading="lazy"/></div>
+          <div class="qr-label">Scan to book</div>
           <div class="actions">
-            <a href="https://www.fresha.com" target="_blank">Book Online</a>
-            <a href="#" style="opacity:.5;">Coming Soon</a>
+            <a href="https://www.fresha.com" target="_blank" rel="noopener">Book Online</a>
+            <a href="tel:0397728143">Call</a>
           </div>
         </div>
 
@@ -1664,9 +1706,11 @@
           <h3>Mordialloc</h3>
           <p class="addr">475a Main St<br/>Mordialloc VIC</p>
           <div class="hours">7 Days · 10am - 8:30pm</div>
+          <div class="qr"><img src="assets/qr/qr-mordialloc.png" alt="Scan to book online at Club Thai Massage Mordialloc" loading="lazy"/></div>
+          <div class="qr-label">Scan to book</div>
           <div class="actions">
-            <a href="https://www.fresha.com" target="_blank">Book Online</a>
-            <a href="#" style="opacity:.5;">Coming Soon</a>
+            <a href="https://www.fresha.com" target="_blank" rel="noopener">Book Online</a>
+            <a href="tel:0397728143">Call</a>
           </div>
         </div>
 
@@ -1674,9 +1718,11 @@
           <h3>Chelsea</h3>
           <p class="addr">3/484 Nepean Hwy<br/>Chelsea VIC</p>
           <div class="hours">7 Days · 10am - 8:30pm</div>
+          <div class="qr"><img src="assets/qr/qr-chelsea.png" alt="Scan to book online at Club Thai Massage Chelsea" loading="lazy"/></div>
+          <div class="qr-label">Scan to book</div>
           <div class="actions">
-            <a href="https://www.fresha.com" target="_blank">Book Online</a>
-            <a href="#" style="opacity:.5;">Coming Soon</a>
+            <a href="https://www.fresha.com" target="_blank" rel="noopener">Book Online</a>
+            <a href="tel:0397728143">Call</a>
           </div>
         </div>
       </div>
@@ -1689,6 +1735,10 @@
       <div class="section-header">
         <div class="eyebrow">What Our Clients Say</div>
         <h2>Real Reviews,<br/><em>Real Results.</em></h2>
+        <div class="award-badge">
+          <img src="assets/qr/fresha-best-in-class.png" alt="Fresha Best in Class 2026 award badge"/>
+          <span>Awarded <strong>Best in Class 2026</strong> by Fresha</span>
+        </div>
       </div>
 
       <div class="reviews-grid">
